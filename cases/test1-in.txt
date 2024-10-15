@@ -1,1 +1,1 @@
-python main.py --train ./auto-tests/data/mini/train.txt --valid ./auto-tests/data/mini/test.txt --smooth laplace -n 1
+python main.py --train ./hw1-autograding/data/mini/train.txt --valid ./hw1-autograding/data/mini/test.txt --smooth laplace -n 1

@@ -2,9 +2,9 @@ import subprocess
 import os
 from pathlib import Path
 
-self_dir = "./hw1_autograding/"
+self_dir = "./hw1-autograding/"
 
-test_folder = "cases/"
+test_folder = self_dir + "cases/"
 undef = ["ppl: nan\n", "ppl: inf\n"]
 
 def test_match(testnum): 

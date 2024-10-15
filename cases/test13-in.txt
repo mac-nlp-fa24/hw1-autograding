@@ -1,1 +1,1 @@
-python main.py --train ./auto-tests/data/mini/train.txt --valid ./auto-tests/data/mini/test.txt --smooth interp -n 4 --coeff 0.8,0.1,0.1,0.0
+python main.py --train ./hw1-autograding/data/mini/train.txt --valid ./hw1-autograding/data/mini/test.txt --smooth interp -n 4 --coeff 0.8,0.1,0.1,0.0

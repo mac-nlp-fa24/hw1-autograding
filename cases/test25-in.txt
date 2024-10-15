@@ -1,1 +1,1 @@
-python main.py --train ./auto-tests/data/brown-mini/train.txt --valid ./auto-tests/data/brown-mini/test.txt --smooth laplace -n 3
+python main.py --train ./hw1-autograding/data/brown-mini/train.txt --valid ./hw1-autograding/data/brown-mini/test.txt --smooth laplace -n 3
