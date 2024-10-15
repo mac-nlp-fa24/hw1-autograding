@@ -1,0 +1,1 @@
+python main.py --train ./auto-tests/data/brown-mini/train.txt --valid ./auto-tests/data/brown-mini/test.txt --smooth interp -n 4 --coeff 0.6,0.2,0.1,0.1

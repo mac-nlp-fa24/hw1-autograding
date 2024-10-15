@@ -1,0 +1,1 @@
+python main.py --train ./auto-tests/data/mini/train.txt --valid ./auto-tests/data/mini/test.txt --smooth backoff -n 4 --discount 0.9
