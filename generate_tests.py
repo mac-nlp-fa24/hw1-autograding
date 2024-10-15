@@ -2,7 +2,7 @@ import subprocess
 import os
 from pathlib import Path
 
-self_dir = "./hw1-autograder/"
+self_dir = "./hw1-autograding/"
 
 run_cmd = "python main.py --train {} --valid {} --smooth {} -n {}"
 discount = " --discount {}" 

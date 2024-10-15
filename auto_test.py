@@ -2,7 +2,7 @@ import subprocess
 import os
 from pathlib import Path
 
-self_dir = "./hw1_autograder/"
+self_dir = "./hw1_autograding/"
 
 test_folder = "cases/"
 undef = ["ppl: nan\n", "ppl: inf\n"]
