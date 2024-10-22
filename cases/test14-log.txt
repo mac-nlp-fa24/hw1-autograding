@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/sarehall/Code/Teaching/NLP-FA24/HW-ngram/testing/hw1-ngram/main.py", line 99, in <module>
+    print("logp({}|{}) = {:.3}".format(w, " ".join(c), model.logprob(w, c, debug=args.debug)), file=sys.stderr)
+  File "/Users/sarehall/Code/Teaching/NLP-FA24/HW-ngram/testing/hw1-ngram/ngram_backoff.py", line 63, in logprob
+    if debug: print("Back off to {}-gram".format(n), file=sys.err)
+AttributeError: module 'sys' has no attribute 'err'
