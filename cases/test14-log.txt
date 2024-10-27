@@ -1,6 +1,56 @@
-Traceback (most recent call last):
-  File "/Users/sarehall/Code/Teaching/NLP-FA24/HW-ngram/testing/hw1-ngram/main.py", line 99, in <module>
-    print("logp({}|{}) = {:.3}".format(w, " ".join(c), model.logprob(w, c, debug=args.debug)), file=sys.stderr)
-  File "/Users/sarehall/Code/Teaching/NLP-FA24/HW-ngram/testing/hw1-ngram/ngram_backoff.py", line 63, in logprob
-    if debug: print("Back off to {}-gram".format(n), file=sys.err)
-AttributeError: module 'sys' has no attribute 'err'
+Back off to 3-gram
+alpha(<eos> <eos>) = 1
+c(<eos> <eos> this) = 1
+logp(this|<eos> <eos>) = -1.74
+Back off to 3-gram
+alpha(<eos> this) = 1
+c(<eos> this is) = 1
+logp(is|<eos> this) = -1.74
+Back off to 3-gram
+alpha(this is) = 1
+c(this is a) = 1
+logp(a|this is) = -1.74
+Back off to 3-gram
+alpha(is a) = 1
+c(is a sample) = 1
+logp(sample|is a) = -1.74
+Back off to 3-gram
+alpha(a sample) = 1
+c(a sample text) = 1
+logp(text|a sample) = -1.74
+Back off to 3-gram
+alpha(sample text) = 1
+c(sample text .) = 1
+logp(.|sample text) = -1.74
+Back off to 3-gram
+alpha(text .) = 2
+c(text . this) = 1
+logp(this|text .) = -2.74
+Back off to 3-gram
+alpha(. this) = 1
+c(. this isn't) = 1
+logp(isn't|. this) = -1.74
+Back off to 3-gram
+alpha(this isn't) = 1
+c(this isn't a) = 1
+logp(a|this isn't) = -1.74
+Back off to 3-gram
+alpha(isn't a) = 1
+c(isn't a simple) = 1
+logp(simple|isn't a) = -1.74
+Back off to 3-gram
+alpha(a simple) = 1
+c(a simple text) = 1
+logp(text|a simple) = -1.74
+Back off to 3-gram
+alpha(simple text) = 1
+c(simple text .) = 1
+logp(.|simple text) = -1.74
+Back off to 3-gram
+alpha(text .) = 2
+c(text . <eos>) = 1
+logp(<eos>|text .) = -2.74
+Back off to 3-gram
+alpha(. <eos>) = 1
+c(. <eos> <eos>) = 1
+logp(<eos>|. <eos>) = -1.74

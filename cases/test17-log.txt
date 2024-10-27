@@ -1,6 +1,60 @@
-Traceback (most recent call last):
-  File "/Users/sarehall/Code/Teaching/NLP-FA24/HW-ngram/testing/hw1-ngram/main.py", line 99, in <module>
-    print("logp({}|{}) = {:.3}".format(w, " ".join(c), model.logprob(w, c, debug=args.debug)), file=sys.stderr)
-  File "/Users/sarehall/Code/Teaching/NLP-FA24/HW-ngram/testing/hw1-ngram/ngram_backoff.py", line 63, in logprob
-    if debug: print("Back off to {}-gram".format(n), file=sys.err)
-AttributeError: module 'sys' has no attribute 'err'
+Back off to 4-gram
+alpha(<eos> <eos> <eos>) = 1
+c(<eos> <eos> <eos> this) = 1
+logp(this|<eos> <eos> <eos>) = -1.74
+Back off to 4-gram
+alpha(<eos> <eos> this) = 1
+c(<eos> <eos> this is) = 1
+logp(is|<eos> <eos> this) = -1.74
+Back off to 4-gram
+alpha(<eos> this is) = 1
+c(<eos> this is a) = 1
+logp(a|<eos> this is) = -1.74
+Back off to 4-gram
+alpha(this is a) = 1
+c(this is a sample) = 1
+logp(sample|this is a) = -1.74
+Back off to 4-gram
+alpha(is a sample) = 1
+c(is a sample text) = 1
+logp(text|is a sample) = -1.74
+Back off to 4-gram
+alpha(a sample text) = 1
+c(a sample text .) = 1
+logp(.|a sample text) = -1.74
+Back off to 4-gram
+alpha(sample text .) = 1
+c(sample text . this) = 1
+logp(this|sample text .) = -1.74
+Back off to 4-gram
+alpha(text . this) = 1
+c(text . this isn't) = 1
+logp(isn't|text . this) = -1.74
+Back off to 4-gram
+alpha(. this isn't) = 1
+c(. this isn't a) = 1
+logp(a|. this isn't) = -1.74
+Back off to 4-gram
+alpha(this isn't a) = 1
+c(this isn't a simple) = 1
+logp(simple|this isn't a) = -1.74
+Back off to 4-gram
+alpha(isn't a simple) = 1
+c(isn't a simple text) = 1
+logp(text|isn't a simple) = -1.74
+Back off to 4-gram
+alpha(a simple text) = 1
+c(a simple text .) = 1
+logp(.|a simple text) = -1.74
+Back off to 4-gram
+alpha(simple text .) = 1
+c(simple text . <eos>) = 1
+logp(<eos>|simple text .) = -1.74
+Back off to 4-gram
+alpha(text . <eos>) = 1
+c(text . <eos> <eos>) = 1
+logp(<eos>|text . <eos>) = -1.74
+Back off to 4-gram
+alpha(. <eos> <eos>) = 1
+c(. <eos> <eos> <eos>) = 1
+logp(<eos>|. <eos> <eos>) = -1.74

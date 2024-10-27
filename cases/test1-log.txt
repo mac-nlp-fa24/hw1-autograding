@@ -1,6 +1,39 @@
-Traceback (most recent call last):
-  File "/Users/sarehall/Code/Teaching/NLP-FA24/HW-ngram/testing/hw1-ngram/main.py", line 99, in <module>
-    print("logp({}|{}) = {:.3}".format(w, " ".join(c), model.logprob(w, c, debug=args.debug)), file=sys.stderr)
-  File "/Users/sarehall/Code/Teaching/NLP-FA24/HW-ngram/testing/hw1-ngram/ngram_laplace.py", line 41, in logprob
-    file=sys.stderr)
-NameError: name 'sys' is not defined
+c*(this) = 3
+c*(___) = 22
+logp(this|) = -2.87
+c*(is) = 2
+c*(___) = 22
+logp(is|) = -3.46
+c*(a) = 3
+c*(___) = 22
+logp(a|) = -2.87
+c*(sample) = 2
+c*(___) = 22
+logp(sample|) = -3.46
+c*(text) = 3
+c*(___) = 22
+logp(text|) = -2.87
+c*(.) = 3
+c*(___) = 22
+logp(.|) = -2.87
+c*(this) = 3
+c*(___) = 22
+logp(this|) = -2.87
+c*(isn't) = 2
+c*(___) = 22
+logp(isn't|) = -3.46
+c*(a) = 3
+c*(___) = 22
+logp(a|) = -2.87
+c*(simple) = 2
+c*(___) = 22
+logp(simple|) = -3.46
+c*(text) = 3
+c*(___) = 22
+logp(text|) = -2.87
+c*(.) = 3
+c*(___) = 22
+logp(.|) = -2.87
+c*(<eos>) = 2
+c*(___) = 22
+logp(<eos>|) = -3.46

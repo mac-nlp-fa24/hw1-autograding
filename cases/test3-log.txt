@@ -1,6 +1,39 @@
-Traceback (most recent call last):
-  File "/Users/sarehall/Code/Teaching/NLP-FA24/HW-ngram/testing/hw1-ngram/main.py", line 99, in <module>
-    print("logp({}|{}) = {:.3}".format(w, " ".join(c), model.logprob(w, c, debug=args.debug)), file=sys.stderr)
-  File "/Users/sarehall/Code/Teaching/NLP-FA24/HW-ngram/testing/hw1-ngram/ngram_laplace.py", line 41, in logprob
-    file=sys.stderr)
-NameError: name 'sys' is not defined
+c*(<eos> this) = 2
+c*(<eos> ___) = 10
+logp(this|<eos>) = -2.32
+c*(this is) = 2
+c*(this ___) = 11
+logp(is|this) = -2.46
+c*(is a) = 2
+c*(is ___) = 10
+logp(a|is) = -2.32
+c*(a sample) = 2
+c*(a ___) = 11
+logp(sample|a) = -2.46
+c*(sample text) = 2
+c*(sample ___) = 10
+logp(text|sample) = -2.32
+c*(text .) = 3
+c*(text ___) = 11
+logp(.|text) = -1.87
+c*(. this) = 2
+c*(. ___) = 11
+logp(this|.) = -2.46
+c*(this isn't) = 2
+c*(this ___) = 11
+logp(isn't|this) = -2.46
+c*(isn't a) = 2
+c*(isn't ___) = 10
+logp(a|isn't) = -2.32
+c*(a simple) = 2
+c*(a ___) = 11
+logp(simple|a) = -2.46
+c*(simple text) = 2
+c*(simple ___) = 10
+logp(text|simple) = -2.32
+c*(text .) = 3
+c*(text ___) = 11
+logp(.|text) = -1.87
+c*(. <eos>) = 2
+c*(. ___) = 11
+logp(<eos>|.) = -2.46

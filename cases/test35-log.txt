@@ -1,6 +1,8768 @@
-Traceback (most recent call last):
-  File "/Users/sarehall/Code/Teaching/NLP-FA24/HW-ngram/testing/hw1-ngram/main.py", line 99, in <module>
-    print("logp({}|{}) = {:.3}".format(w, " ".join(c), model.logprob(w, c, debug=args.debug)), file=sys.stderr)
-  File "/Users/sarehall/Code/Teaching/NLP-FA24/HW-ngram/testing/hw1-ngram/ngram_backoff.py", line 63, in logprob
-    if debug: print("Back off to {}-gram".format(n), file=sys.err)
-AttributeError: module 'sys' has no attribute 'err'
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> the) = 8
+logp(the|<eos> <eos>) = -4.16
+Back off to unigram
+alpha([]) = 1987
+c(providence) = 0
+logp(providence|<eos> the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(daily) = 0
+logp(daily|the providence) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(journal) = 0
+logp(journal|providence daily) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(stated) = 0
+logp(stated|daily journal) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(that) = 21
+logp(that|journal stated) = -10.1
+Back off to unigram
+alpha([]) = 1759
+c(although) = 0
+logp(although|stated that) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(the) = 122
+logp(the|that although) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(guilt) = 0
+logp(guilt|although the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|the guilt) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(brown) = 1
+logp(brown|guilt of) = -14.4
+Back off to unigram
+alpha([]) = 2136
+c(was) = 12
+logp(was|of brown) = -10.9
+Back off to unigram
+alpha([]) = 2065
+c(evident) = 1
+logp(evident|brown was) = -14.5
+Back off to unigram
+alpha([]) = 2116
+c(,) = 99
+logp(,|was evident) = -7.89
+Back off to 2-gram
+alpha(,) = 99
+c(, the) = 9
+logp(the|evident ,) = -5.71
+Back off to unigram
+alpha([]) = 1987
+c(south) = 0
+logp(south|, the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(must) = 1
+logp(must|the south) = -14.5
+Back off to unigram
+alpha([]) = 2135
+c(guarantee) = 0
+logp(guarantee|south must) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(him) = 4
+logp(him|must guarantee) = -12.5
+Back off to unigram
+alpha([]) = 1952
+c(a) = 47
+logp(a|guarantee him) = -8.85
+Back off to unigram
+alpha([]) = 2075
+c(fair) = 0
+logp(fair|him a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(trial) = 0
+logp(trial|a fair) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|fair trial) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(preserve) = 0
+logp(preserve|trial to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(domestic) = 0
+logp(domestic|to preserve) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(peace) = 1
+logp(peace|preserve domestic) = -14.5
+Back off to unigram
+alpha([]) = 2038
+c(.) = 83
+logp(.|domestic peace) = -8.09
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|peace .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> but) = 1
+logp(but|<eos> <eos>) = -7.16
+Back off to unigram
+alpha([]) = 1972
+c(since) = 1
+logp(since|<eos> but) = -14.4
+Back off to unigram
+alpha([]) = 2130
+c(1927) = 0
+logp(1927|but since) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|since 1927) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(researchers) = 0
+logp(researchers|1927 ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(digging) = 0
+logp(digging|, researchers) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(into) = 4
+logp(into|researchers digging) = -12.5
+Back off to unigram
+alpha([]) = 2000
+c(ancient) = 0
+logp(ancient|digging into) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(court) = 0
+logp(court|into ancient) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(records) = 0
+logp(records|ancient court) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|court records) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(legal) = 0
+logp(legal|records and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(files) = 0
+logp(files|and legal) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(have) = 7
+logp(have|legal files) = -11.7
+Back off to 2-gram
+alpha(have) = 7
+c(have been) = 1
+logp(been|files have) = -5.06
+Back off to unigram
+alpha([]) = 2035
+c(able) = 0
+logp(able|have been) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|been able) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(find) = 0
+logp(find|able to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(illuminating) = 0
+logp(illuminating|to find) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(pieces) = 0
+logp(pieces|find illuminating) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|illuminating pieces) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(information) = 0
+logp(information|pieces of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|of information) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|information .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> for) = 1
+logp(for|<eos> <eos>) = -7.16
+Back off to unigram
+alpha([]) = 1824
+c(moments) = 0
+logp(moments|<eos> for) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(he) = 23
+logp(he|for moments) = -10.0
+Back off to unigram
+alpha([]) = 2080
+c(stood) = 0
+logp(stood|moments he) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(in) = 41
+logp(in|he stood) = -9.18
+Back off to unigram
+alpha([]) = 1894
+c(water) = 1
+logp(water|stood in) = -14.4
+Back off to unigram
+alpha([]) = 2136
+c(,) = 99
+logp(,|in water) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(shivering) = 0
+logp(shivering|water ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|, shivering) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(gasping) = 0
+logp(gasping|shivering and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(for) = 14
+logp(for|and gasping) = -10.7
+Back off to unigram
+alpha([]) = 1824
+c(breath) = 0
+logp(breath|gasping for) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|for breath) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|breath .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(why) = 0
+logp(why|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(trust) = 0
+logp(trust|<eos> why) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(jagan) = 0
+logp(jagan|why trust) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(?) = 8
+logp(?|trust jagan) = -11.5
+Back off to 2-gram
+alpha(?) = 8
+c(? ?) = 4
+logp(?|jagan ?) = -3.25
+Back off to 3-gram
+alpha(? ?) = 4
+c(? ? <eos>) = 4
+logp(<eos>|? ?) = -0.515
+Back off to 3-gram
+alpha(? <eos>) = 4
+c(? <eos> <eos>) = 4
+logp(<eos>|? <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(oliver's) = 0
+logp(oliver's|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(37-1/2) = 0
+logp(37-1/2|<eos> oliver's) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(feet) = 0
+logp(feet|oliver's 37-1/2) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(is) = 12
+logp(is|37-1/2 feet) = -11.0
+Back off to unigram
+alpha([]) = 1847
+c(partly) = 0
+logp(partly|feet is) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(based) = 0
+logp(based|is partly) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(on) = 11
+logp(on|partly based) = -11.1
+Back off to unigram
+alpha([]) = 1951
+c(this) = 16
+logp(this|based on) = -10.4
+Back off to unigram
+alpha([]) = 2030
+c(report) = 0
+logp(report|on this) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|this report) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(can) = 7
+logp(can|report and) = -11.4
+Back off to 2-gram
+alpha(can) = 7
+c(can be) = 5
+logp(be|and can) = -2.74
+Back off to unigram
+alpha([]) = 2068
+c(accepted) = 0
+logp(accepted|can be) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(as) = 17
+logp(as|be accepted) = -10.4
+Back off to unigram
+alpha([]) = 1789
+c(probable) = 0
+logp(probable|accepted as) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|as probable) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|probable .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c('') = 12
+logp(''|<eos> <eos>) = -10.4
+Back off to unigram
+alpha([]) = 1940
+c(then) = 3
+logp(then|<eos> '') = -12.8
+Back off to unigram
+alpha([]) = 2134
+c(it) = 16
+logp(it|'' then) = -10.5
+Back off to 2-gram
+alpha(it) = 16
+c(it was) = 1
+logp(was|then it) = -6.25
+Back off to unigram
+alpha([]) = 2065
+c(no) = 2
+logp(no|it was) = -13.5
+Back off to unigram
+alpha([]) = 2053
+c(bogey) = 0
+logp(bogey|was no) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(she) = 2
+logp(she|no bogey) = -13.5
+Back off to unigram
+alpha([]) = 2130
+c(had) = 4
+logp(had|bogey she) = -12.5
+Back off to unigram
+alpha([]) = 2082
+c(dreamed) = 0
+logp(dreamed|she had) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(up) = 4
+logp(up|had dreamed) = -12.5
+Back off to unigram
+alpha([]) = 2102
+c(;) = 8
+logp(;|dreamed up) = -11.5
+Back off to 2-gram
+alpha(;) = 8
+c(; ;) = 4
+logp(;|up ;) = -3.25
+Back off to 3-gram
+alpha(; ;) = 4
+c(; ; <eos>) = 4
+logp(<eos>|; ;) = -0.515
+Back off to 3-gram
+alpha(; <eos>) = 4
+c(; <eos> <eos>) = 4
+logp(<eos>|; <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> a) = 1
+logp(a|<eos> <eos>) = -7.16
+Back off to unigram
+alpha([]) = 2075
+c(third) = 1
+logp(third|<eos> a) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(remarked) = 0
+logp(remarked|a third) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|third remarked) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(slowness) = 0
+logp(slowness|remarked of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|of slowness) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(southerners) = 0
+logp(southerners|slowness of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(:) = 3
+logp(:|of southerners) = -13.0
+Back off to unigram
+alpha([]) = 2012
+c(``) = 15
+logp(``|southerners :) = -10.5
+Back off to unigram
+alpha([]) = 2024
+c(they) = 4
+logp(they|: ``) = -12.5
+Back off to 2-gram
+alpha(they) = 4
+c(they moved) = 1
+logp(moved|`` they) = -4.25
+Back off to unigram
+alpha([]) = 2059
+c(about) = 2
+logp(about|they moved) = -13.5
+Back off to unigram
+alpha([]) = 2015
+c(from) = 11
+logp(from|moved about) = -11.0
+Back off to unigram
+alpha([]) = 2004
+c(corner) = 1
+logp(corner|about from) = -14.4
+Back off to unigram
+alpha([]) = 2134
+c(to) = 37
+logp(to|from corner) = -9.32
+Back off to unigram
+alpha([]) = 1889
+c(corner) = 1
+logp(corner|corner to) = -14.4
+Back off to unigram
+alpha([]) = 2134
+c(,) = 99
+logp(,|to corner) = -7.9
+Back off to 2-gram
+alpha(,) = 99
+c(, as) = 2
+logp(as|corner ,) = -7.88
+Back off to unigram
+alpha([]) = 1789
+c(uneasy) = 0
+logp(uneasy|, as) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(as) = 17
+logp(as|as uneasy) = -10.4
+Back off to 2-gram
+alpha(as) = 17
+c(as a) = 2
+logp(a|uneasy as) = -5.34
+Back off to unigram
+alpha([]) = 2075
+c(litter) = 0
+logp(litter|as a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|a litter) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(hungry) = 0
+logp(hungry|litter of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(leaches) = 0
+logp(leaches|of hungry) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(on) = 11
+logp(on|hungry leaches) = -11.1
+Back off to 2-gram
+alpha(on) = 11
+c(on the) = 5
+logp(the|leaches on) = -3.39
+Back off to 2-gram
+alpha(the) = 117
+c(the neck) = 1
+logp(neck|on the) = -9.12
+Back off to unigram
+alpha([]) = 2038
+c(of) = 71
+logp(of|the neck) = -8.32
+Back off to unigram
+alpha([]) = 1910
+c(a) = 47
+logp(a|neck of) = -8.82
+Back off to unigram
+alpha([]) = 2075
+c(wooden) = 0
+logp(wooden|of a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(god) = 1
+logp(god|a wooden) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c('') = 12
+logp(''|wooden god) = -10.9
+Back off to 2-gram
+alpha('') = 12
+c('' .) = 5
+logp(.|god '') = -3.51
+Back off to 3-gram
+alpha('' .) = 5
+c('' . <eos>) = 5
+logp(<eos>|'' .) = -0.515
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(about) = 2
+logp(about|<eos> <eos>) = -13.0
+Back off to unigram
+alpha([]) = 2015
+c(1500) = 0
+logp(1500|<eos> about) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(delegates) = 0
+logp(delegates|about 1500) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(are) = 8
+logp(are|1500 delegates) = -11.5
+Back off to unigram
+alpha([]) = 1992
+c(expected) = 0
+logp(expected|delegates are) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|are expected) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(register) = 0
+logp(register|expected to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(today) = 0
+logp(today|to register) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(for) = 14
+logp(for|register today) = -10.7
+Back off to 2-gram
+alpha(for) = 14
+c(for the) = 1
+logp(the|today for) = -6.06
+Back off to unigram
+alpha([]) = 1987
+c(biennial) = 0
+logp(biennial|for the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(session) = 0
+logp(session|the biennial) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|biennial session) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of the) = 18
+logp(the|session of) = -4.23
+Back off to unigram
+alpha([]) = 1987
+c(ancient) = 0
+logp(ancient|of the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|the ancient) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(accepted) = 0
+logp(accepted|ancient and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(scottish) = 0
+logp(scottish|and accepted) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(rite) = 0
+logp(rite|accepted scottish) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(for) = 14
+logp(for|scottish rite) = -10.7
+Back off to 2-gram
+alpha(for) = 14
+c(for the) = 1
+logp(the|rite for) = -6.06
+Back off to unigram
+alpha([]) = 1987
+c(southern) = 0
+logp(southern|for the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(jurisdiction) = 0
+logp(jurisdiction|the southern) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|southern jurisdiction) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of the) = 18
+logp(the|jurisdiction of) = -4.23
+Back off to unigram
+alpha([]) = 1987
+c(united) = 0
+logp(united|of the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(states) = 0
+logp(states|the united) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|united states) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|states .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(not) = 8
+logp(not|<eos> <eos>) = -11.0
+Back off to unigram
+alpha([]) = 2100
+c(all) = 5
+logp(all|<eos> not) = -12.2
+Back off to unigram
+alpha([]) = 2122
+c(,) = 99
+logp(,|not all) = -7.9
+Back off to 2-gram
+alpha(,) = 99
+c(, as) = 2
+logp(as|all ,) = -7.88
+Back off to 2-gram
+alpha(as) = 14
+c(as a) = 2
+logp(a|, as) = -5.06
+Back off to unigram
+alpha([]) = 2075
+c(matter) = 0
+logp(matter|as a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|a matter) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(fact) = 0
+logp(fact|matter of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|of fact) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(consider) = 0
+logp(consider|fact ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(themselves) = 0
+logp(themselves|, consider) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(``) = 15
+logp(``|consider themselves) = -10.6
+Back off to unigram
+alpha([]) = 2024
+c(mediums) = 0
+logp(mediums|themselves ``) = -inf
+Back off to unigram
+alpha([]) = 2137
+c('') = 12
+logp(''|`` mediums) = -11.0
+Back off to unigram
+alpha([]) = 1940
+c(in) = 41
+logp(in|mediums '') = -9.04
+Back off to 2-gram
+alpha(in) = 41
+c(in the) = 10
+logp(the|'' in) = -4.29
+Back off to unigram
+alpha([]) = 1987
+c(sense) = 1
+logp(sense|in the) = -14.4
+Back off to unigram
+alpha([]) = 2090
+c(of) = 71
+logp(of|the sense) = -8.35
+Back off to unigram
+alpha([]) = 1910
+c(receiving) = 0
+logp(receiving|sense of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(messages) = 0
+logp(messages|of receiving) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(from) = 11
+logp(from|receiving messages) = -11.1
+Back off to 2-gram
+alpha(from) = 11
+c(from the) = 3
+logp(the|messages from) = -4.13
+Back off to unigram
+alpha([]) = 1987
+c(deceased) = 0
+logp(deceased|from the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|the deceased) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|deceased .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> the) = 8
+logp(the|<eos> <eos>) = -4.16
+Back off to unigram
+alpha([]) = 1987
+c(detailed) = 0
+logp(detailed|<eos> the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(mechanisms) = 0
+logp(mechanisms|the detailed) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|detailed mechanisms) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of this) = 5
+logp(this|mechanisms of) = -6.08
+Back off to unigram
+alpha([]) = 2030
+c(type) = 1
+logp(type|of this) = -14.5
+Back off to 2-gram
+alpha(type) = 1
+c(type of) = 1
+logp(of|this type) = -2.25
+Back off to unigram
+alpha([]) = 1910
+c(failure) = 0
+logp(failure|type of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(have) = 7
+logp(have|of failure) = -11.7
+Back off to 2-gram
+alpha(have) = 7
+c(have been) = 1
+logp(been|failure have) = -5.06
+Back off to unigram
+alpha([]) = 2035
+c(studied) = 0
+logp(studied|have been) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(extensively) = 0
+logp(extensively|been studied) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(by) = 12
+logp(by|studied extensively) = -11.0
+Back off to unigram
+alpha([]) = 1954
+c(merchant) = 0
+logp(merchant|extensively by) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(for) = 14
+logp(for|by merchant) = -10.7
+Back off to unigram
+alpha([]) = 1824
+c(metal) = 0
+logp(metal|merchant for) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(cutting) = 0
+logp(cutting|for metal) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|metal cutting) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, and) = 5
+logp(and|cutting ,) = -6.56
+Back off to 2-gram
+alpha(and) = 36
+c(and the) = 3
+logp(the|, and) = -5.84
+Back off to unigram
+alpha([]) = 1987
+c(principles) = 0
+logp(principles|and the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(found) = 1
+logp(found|the principles) = -14.5
+Back off to unigram
+alpha([]) = 2090
+c(can) = 7
+logp(can|principles found) = -11.7
+Back off to 2-gram
+alpha(can) = 7
+c(can be) = 5
+logp(be|found can) = -2.74
+Back off to unigram
+alpha([]) = 2068
+c(directly) = 0
+logp(directly|can be) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(applied) = 1
+logp(applied|be directly) = -14.5
+Back off to 2-gram
+alpha(applied) = 1
+c(applied to) = 1
+logp(to|directly applied) = -2.25
+Back off to unigram
+alpha([]) = 1889
+c(coatings) = 0
+logp(coatings|applied to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|to coatings) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|coatings .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> he) = 4
+logp(he|<eos> <eos>) = -5.16
+Back off to unigram
+alpha([]) = 2080
+c(immediately) = 0
+logp(immediately|<eos> he) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(rode) = 0
+logp(rode|he immediately) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(on) = 11
+logp(on|immediately rode) = -11.1
+Back off to unigram
+alpha([]) = 1951
+c(to) = 37
+logp(to|rode on) = -9.19
+Back off to unigram
+alpha([]) = 1889
+c(cheyenne) = 0
+logp(cheyenne|on to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|to cheyenne) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, threw) = 1
+logp(threw|cheyenne ,) = -8.88
+Back off to unigram
+alpha([]) = 2133
+c(a) = 47
+logp(a|, threw) = -8.98
+Back off to unigram
+alpha([]) = 2075
+c(ten-day) = 0
+logp(ten-day|threw a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(drinking) = 0
+logp(drinking|a ten-day) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(spree) = 0
+logp(spree|ten-day drinking) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|drinking spree) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(dropped) = 0
+logp(dropped|spree and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(some) = 7
+logp(some|and dropped) = -11.7
+Back off to unigram
+alpha([]) = 2061
+c(very) = 2
+logp(very|dropped some) = -13.5
+Back off to unigram
+alpha([]) = 2037
+c(strong) = 0
+logp(strong|some very) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(hints) = 0
+logp(hints|very strong) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(among) = 1
+logp(among|strong hints) = -14.5
+Back off to unigram
+alpha([]) = 2015
+c(friends) = 1
+logp(friends|hints among) = -14.5
+Back off to unigram
+alpha([]) = 2096
+c(.) = 83
+logp(.|among friends) = -8.13
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|friends .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(much) = 2
+logp(much|<eos> <eos>) = -13.0
+Back off to unigram
+alpha([]) = 2135
+c(of) = 71
+logp(of|<eos> much) = -8.38
+Back off to unigram
+alpha([]) = 1910
+c(it) = 16
+logp(it|much of) = -10.4
+Back off to unigram
+alpha([]) = 1886
+c(has) = 2
+logp(has|of it) = -13.4
+Back off to unigram
+alpha([]) = 2127
+c(continued) = 0
+logp(continued|it has) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|has continued) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(be) = 16
+logp(be|continued to) = -10.4
+Back off to unigram
+alpha([]) = 2068
+c(used) = 1
+logp(used|to be) = -14.5
+Back off to unigram
+alpha([]) = 2096
+c(over) = 0
+logp(over|be used) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(the) = 122
+logp(the|used over) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(years) = 0
+logp(years|over the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|the years) = -9.18
+Back off to 2-gram
+alpha(and) = 41
+c(and the) = 3
+logp(the|years and) = -6.02
+Back off to unigram
+alpha([]) = 1987
+c(heart) = 0
+logp(heart|and the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|the heart) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(it) = 16
+logp(it|heart of) = -10.4
+Back off to unigram
+alpha([]) = 1886
+c(--) = 7
+logp(--|of it) = -11.5
+Back off to unigram
+alpha([]) = 1947
+c(good) = 0
+logp(good|it --) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(guys) = 0
+logp(guys|-- good) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|good guys) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(bad) = 1
+logp(bad|guys and) = -14.3
+Back off to unigram
+alpha([]) = 2136
+c(guys) = 0
+logp(guys|and bad) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(in) = 41
+logp(in|bad guys) = -9.18
+Back off to 2-gram
+alpha(in) = 41
+c(in the) = 10
+logp(the|guys in) = -4.29
+Back off to 3-gram
+alpha(in the) = 10
+c(in the old) = 1
+logp(old|in the) = -3.84
+Back off to unigram
+alpha([]) = 2134
+c(west) = 0
+logp(west|the old) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(--) = 7
+logp(--|old west) = -11.7
+Back off to unigram
+alpha([]) = 1947
+c(pretty) = 0
+logp(pretty|west --) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(well) = 6
+logp(well|-- pretty) = -12.0
+Back off to unigram
+alpha([]) = 1990
+c(dominated) = 0
+logp(dominated|pretty well) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(television) = 0
+logp(television|well dominated) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(toward) = 0
+logp(toward|dominated television) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(the) = 122
+logp(the|television toward) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(end) = 0
+logp(end|toward the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|the end) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of the) = 18
+logp(the|end of) = -4.23
+Back off to unigram
+alpha([]) = 1987
+c(1950's) = 0
+logp(1950's|of the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|the 1950's) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|1950's .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(religion) = 0
+logp(religion|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(usually) = 2
+logp(usually|<eos> religion) = -13.5
+Back off to unigram
+alpha([]) = 2127
+c(also) = 0
+logp(also|religion usually) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(includes) = 0
+logp(includes|usually also) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(a) = 47
+logp(a|also includes) = -8.98
+Back off to unigram
+alpha([]) = 2075
+c(principle) = 0
+logp(principle|includes a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|a principle) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(compensation) = 0
+logp(compensation|principle of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|of compensation) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(mainly) = 0
+logp(mainly|compensation ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(in) = 41
+logp(in|, mainly) = -9.18
+Back off to 2-gram
+alpha(in) = 41
+c(in a) = 7
+logp(a|mainly in) = -4.8
+Back off to unigram
+alpha([]) = 2075
+c(promised) = 0
+logp(promised|in a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(perfect) = 0
+logp(perfect|a promised) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(future) = 0
+logp(future|promised perfect) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(state) = 1
+logp(state|perfect future) = -14.5
+Back off to unigram
+alpha([]) = 2066
+c(.) = 83
+logp(.|future state) = -8.11
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|state .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(alec) = 0
+logp(alec|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(was) = 12
+logp(was|<eos> alec) = -11.0
+Back off to unigram
+alpha([]) = 2065
+c(growing) = 0
+logp(growing|alec was) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(more) = 2
+logp(more|was growing) = -13.5
+Back off to unigram
+alpha([]) = 2065
+c(and) = 41
+logp(and|growing more) = -9.13
+Back off to unigram
+alpha([]) = 1762
+c(more) = 2
+logp(more|more and) = -13.3
+Back off to unigram
+alpha([]) = 2065
+c(skeptical) = 0
+logp(skeptical|and more) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|more skeptical) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|skeptical .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> we) = 1
+logp(we|<eos> <eos>) = -7.16
+Back off to unigram
+alpha([]) = 2126
+c(devote) = 0
+logp(devote|<eos> we) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(a) = 47
+logp(a|we devote) = -8.98
+Back off to unigram
+alpha([]) = 2075
+c(chapter) = 0
+logp(chapter|devote a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|a chapter) = -9.33
+Back off to 2-gram
+alpha(to) = 37
+c(to the) = 6
+logp(the|chapter to) = -4.88
+Back off to unigram
+alpha([]) = 1987
+c(binomial) = 1
+logp(binomial|to the) = -14.4
+Back off to unigram
+alpha([]) = 2136
+c(distribution) = 0
+logp(distribution|the binomial) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(not) = 8
+logp(not|binomial distribution) = -11.5
+Back off to unigram
+alpha([]) = 2100
+c(only) = 1
+logp(only|distribution not) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(because) = 5
+logp(because|not only) = -12.2
+Back off to 2-gram
+alpha(because) = 5
+c(because it) = 1
+logp(it|only because) = -4.57
+Back off to 2-gram
+alpha(it) = 15
+c(it is) = 2
+logp(is|because it) = -5.16
+Back off to 2-gram
+alpha(is) = 10
+c(is a) = 2
+logp(a|it is) = -4.57
+Back off to unigram
+alpha([]) = 2075
+c(mathematical) = 0
+logp(mathematical|is a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(model) = 0
+logp(model|a mathematical) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(for) = 14
+logp(for|mathematical model) = -10.7
+Back off to 2-gram
+alpha(for) = 14
+c(for an) = 1
+logp(an|model for) = -6.06
+Back off to unigram
+alpha([]) = 2119
+c(enormous) = 0
+logp(enormous|for an) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(variety) = 0
+logp(variety|an enormous) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|enormous variety) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(real) = 1
+logp(real|variety of) = -14.4
+Back off to unigram
+alpha([]) = 2135
+c(life) = 0
+logp(life|of real) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(phenomena) = 0
+logp(phenomena|real life) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|life phenomena) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, but) = 2
+logp(but|phenomena ,) = -7.88
+Back off to unigram
+alpha([]) = 1972
+c(also) = 0
+logp(also|, but) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(because) = 5
+logp(because|but also) = -12.2
+Back off to 2-gram
+alpha(because) = 5
+c(because it) = 1
+logp(it|also because) = -4.57
+Back off to unigram
+alpha([]) = 1886
+c(has) = 2
+logp(has|because it) = -13.4
+Back off to unigram
+alpha([]) = 2127
+c(important) = 1
+logp(important|it has) = -14.5
+Back off to unigram
+alpha([]) = 2129
+c(properties) = 0
+logp(properties|has important) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(that) = 21
+logp(that|important properties) = -10.1
+Back off to unigram
+alpha([]) = 1759
+c(recur) = 0
+logp(recur|properties that) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(in) = 41
+logp(in|that recur) = -9.18
+Back off to unigram
+alpha([]) = 1894
+c(many) = 0
+logp(many|recur in) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(other) = 2
+logp(other|in many) = -13.5
+Back off to unigram
+alpha([]) = 2133
+c(probability) = 1
+logp(probability|many other) = -14.5
+Back off to unigram
+alpha([]) = 2123
+c(models) = 0
+logp(models|other probability) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|probability models) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|models .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(brakke) = 0
+logp(brakke|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(et) = 0
+logp(et|<eos> brakke) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(al) = 0
+logp(al|brakke et) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|et al) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(1954) = 0
+logp(1954|al ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c()) = 3
+logp()|, 1954) = -13.0
+Back off to 2-gram
+alpha()) = 3
+c() .) = 2
+logp(.|1954 )) = -2.84
+Back off to 3-gram
+alpha() .) = 2
+c() . <eos>) = 2
+logp(<eos>|) .) = -0.515
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(soon) = 0
+logp(soon|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(she) = 2
+logp(she|<eos> soon) = -13.5
+Back off to unigram
+alpha([]) = 2130
+c(was) = 12
+logp(was|soon she) = -10.9
+Back off to unigram
+alpha([]) = 2065
+c(parading) = 0
+logp(parading|she was) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(around) = 2
+logp(around|was parading) = -13.5
+Back off to unigram
+alpha([]) = 2124
+c(the) = 122
+logp(the|parading around) = -7.6
+Back off to 2-gram
+alpha(the) = 122
+c(the house) = 1
+logp(house|around the) = -9.18
+Back off to unigram
+alpha([]) = 2038
+c(,) = 99
+logp(,|the house) = -7.84
+Back off to unigram
+alpha([]) = 1595
+c(flaunting) = 0
+logp(flaunting|house ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(her) = 4
+logp(her|, flaunting) = -12.5
+Back off to unigram
+alpha([]) = 2133
+c(new) = 2
+logp(new|flaunting her) = -13.5
+Back off to unigram
+alpha([]) = 2135
+c(skill) = 0
+logp(skill|her new) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|new skill) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|skill .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> he) = 4
+logp(he|<eos> <eos>) = -5.16
+Back off to unigram
+alpha([]) = 2080
+c(can) = 7
+logp(can|<eos> he) = -11.7
+Back off to 2-gram
+alpha(can) = 7
+c(can be) = 5
+logp(be|he can) = -2.74
+Back off to unigram
+alpha([]) = 2068
+c(expected) = 0
+logp(expected|can be) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|be expected) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(however) = 1
+logp(however|expected ,) = -14.1
+Back off to 2-gram
+alpha(however) = 1
+c(however ,) = 1
+logp(,|, however) = -2.25
+Back off to 2-gram
+alpha(,) = 90
+c(, to) = 2
+logp(to|however ,) = -7.74
+Back off to unigram
+alpha([]) = 1889
+c(examine) = 0
+logp(examine|, to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|to examine) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(interpret) = 0
+logp(interpret|examine and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(the) = 122
+logp(the|and interpret) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(information) = 0
+logp(information|interpret the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(already) = 1
+logp(already|the information) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(available) = 0
+logp(available|information already) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(;) = 8
+logp(;|already available) = -11.5
+Back off to 2-gram
+alpha(;) = 8
+c(; ;) = 4
+logp(;|available ;) = -3.25
+Back off to 3-gram
+alpha(; ;) = 4
+c(; ; <eos>) = 4
+logp(<eos>|; ;) = -0.515
+Back off to 3-gram
+alpha(; <eos>) = 4
+c(; <eos> <eos>) = 4
+logp(<eos>|; <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(list) = 0
+logp(list|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(the) = 122
+logp(the|<eos> list) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(kind) = 1
+logp(kind|list the) = -14.4
+Back off to unigram
+alpha([]) = 2096
+c(and) = 41
+logp(and|the kind) = -9.15
+Back off to unigram
+alpha([]) = 1762
+c(quantity) = 0
+logp(quantity|kind and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|and quantity) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(things) = 0
+logp(things|quantity of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(the) = 122
+logp(the|of things) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(farm) = 0
+logp(farm|things the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(can) = 7
+logp(can|the farm) = -11.7
+Back off to 2-gram
+alpha(can) = 7
+c(can be) = 5
+logp(be|farm can) = -2.74
+Back off to unigram
+alpha([]) = 2068
+c(expected) = 0
+logp(expected|can be) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|be expected) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(produce) = 0
+logp(produce|expected to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(in) = 41
+logp(in|to produce) = -9.18
+Back off to 2-gram
+alpha(in) = 41
+c(in an) = 1
+logp(an|produce in) = -7.61
+Back off to 2-gram
+alpha(an) = 13
+c(an average) = 1
+logp(average|in an) = -5.95
+Back off to unigram
+alpha([]) = 2136
+c(year) = 3
+logp(year|an average) = -12.9
+Back off to unigram
+alpha([]) = 1984
+c(.) = 83
+logp(.|average year) = -8.05
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|year .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> she) = 1
+logp(she|<eos> <eos>) = -7.16
+Back off to unigram
+alpha([]) = 2130
+c(saw) = 1
+logp(saw|<eos> she) = -14.5
+Back off to unigram
+alpha([]) = 2123
+c(me) = 0
+logp(me|she saw) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|saw me) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(sat) = 0
+logp(sat|me and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(down) = 0
+logp(down|and sat) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(beside) = 0
+logp(beside|sat down) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(me) = 0
+logp(me|down beside) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|beside me) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(three) = 1
+logp(three|me ,) = -14.1
+Back off to unigram
+alpha([]) = 2136
+c(feet) = 0
+logp(feet|, three) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(away) = 1
+logp(away|three feet) = -14.5
+Back off to unigram
+alpha([]) = 2130
+c(.) = 83
+logp(.|feet away) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|away .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(jack) = 0
+logp(jack|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|<eos> jack) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(what) = 4
+logp(what|jack ,) = -12.1
+Back off to 2-gram
+alpha(what) = 4
+c(what is) = 1
+logp(is|, what) = -4.25
+Back off to 3-gram
+alpha(what is) = 1
+c(what is the) = 1
+logp(the|what is) = -0.515
+Back off to unigram
+alpha([]) = 1987
+c(nature) = 0
+logp(nature|is the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|the nature) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of this) = 5
+logp(this|nature of) = -6.08
+Back off to unigram
+alpha([]) = 2030
+c(concept) = 0
+logp(concept|of this) = -inf
+Back off to unigram
+alpha([]) = 2137
+c('') = 12
+logp(''|this concept) = -11.0
+Back off to 2-gram
+alpha('') = 12
+c('' ?) = 3
+logp(?|concept '') = -4.25
+Back off to 3-gram
+alpha('' ?) = 3
+c('' ? ?) = 3
+logp(?|'' ?) = -0.515
+Back off to 3-gram
+alpha(? ?) = 4
+c(? ? <eos>) = 4
+logp(<eos>|? ?) = -0.515
+Back off to 3-gram
+alpha(? <eos>) = 4
+c(? <eos> <eos>) = 4
+logp(<eos>|? <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(isn't) = 0
+logp(isn't|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(his) = 13
+logp(his|<eos> isn't) = -10.8
+Back off to unigram
+alpha([]) = 2118
+c(racket) = 0
+logp(racket|isn't his) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(down) = 0
+logp(down|his racket) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(your) = 4
+logp(your|racket down) = -12.5
+Back off to unigram
+alpha([]) = 2128
+c(alley) = 0
+logp(alley|down your) = -inf
+Back off to unigram
+alpha([]) = 2137
+c('') = 12
+logp(''|your alley) = -11.0
+Back off to 2-gram
+alpha('') = 12
+c('' ?) = 3
+logp(?|alley '') = -4.25
+Back off to 3-gram
+alpha('' ?) = 3
+c('' ? ?) = 3
+logp(?|'' ?) = -0.515
+Back off to 3-gram
+alpha(? ?) = 4
+c(? ? <eos>) = 4
+logp(<eos>|? ?) = -0.515
+Back off to 3-gram
+alpha(? <eos>) = 4
+c(? <eos> <eos>) = 4
+logp(<eos>|? <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(poirot) = 0
+logp(poirot|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|<eos> poirot) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(his) = 13
+logp(his|poirot and) = -10.6
+Back off to unigram
+alpha([]) = 2118
+c(counterparts) = 0
+logp(counterparts|and his) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(are) = 8
+logp(are|his counterparts) = -11.5
+Back off to unigram
+alpha([]) = 1992
+c(perfectly) = 0
+logp(perfectly|counterparts are) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(respectable) = 0
+logp(respectable|are perfectly) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(people) = 2
+logp(people|perfectly respectable) = -13.5
+Back off to unigram
+alpha([]) = 1967
+c(;) = 8
+logp(;|respectable people) = -11.4
+Back off to 2-gram
+alpha(;) = 8
+c(; ;) = 4
+logp(;|people ;) = -3.25
+Back off to 3-gram
+alpha(; ;) = 4
+c(; ; <eos>) = 4
+logp(<eos>|; ;) = -0.515
+Back off to 3-gram
+alpha(; <eos>) = 4
+c(; <eos> <eos>) = 4
+logp(<eos>|; <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> in) = 4
+logp(in|<eos> <eos>) = -5.16
+Back off to unigram
+alpha([]) = 1894
+c(another) = 0
+logp(another|<eos> in) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(study) = 2
+logp(study|in another) = -13.5
+Back off to unigram
+alpha([]) = 2066
+c(chromium-substituted) = 0
+logp(chromium-substituted|another study) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(aluminum) = 0
+logp(aluminum|study chromium-substituted) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(oxyhydroxides) = 0
+logp(oxyhydroxides|chromium-substituted aluminum) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|aluminum oxyhydroxides) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(related) = 1
+logp(related|oxyhydroxides and) = -14.3
+Back off to unigram
+alpha([]) = 2100
+c(species) = 0
+logp(species|and related) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|related species) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(prepared) = 0
+logp(prepared|species ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(homogeneously) = 0
+logp(homogeneously|, prepared) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(by) = 12
+logp(by|prepared homogeneously) = -11.0
+Back off to unigram
+alpha([]) = 1954
+c(high-temperature) = 0
+logp(high-temperature|homogeneously by) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(hydrolysis) = 0
+logp(hydrolysis|by high-temperature) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|high-temperature hydrolysis) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(are) = 8
+logp(are|hydrolysis ,) = -11.1
+Back off to unigram
+alpha([]) = 1992
+c(being) = 1
+logp(being|, are) = -14.4
+Back off to unigram
+alpha([]) = 2136
+c(characterized) = 0
+logp(characterized|are being) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|being characterized) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(investigated) = 0
+logp(investigated|characterized and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(spectrally) = 0
+logp(spectrally|and investigated) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(in) = 41
+logp(in|investigated spectrally) = -9.18
+Back off to 2-gram
+alpha(in) = 41
+c(in the) = 10
+logp(the|spectrally in) = -4.29
+Back off to unigram
+alpha([]) = 1987
+c(ultraviolet) = 0
+logp(ultraviolet|in the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(region) = 0
+logp(region|the ultraviolet) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(with) = 7
+logp(with|ultraviolet region) = -11.7
+Back off to unigram
+alpha([]) = 2011
+c(a) = 47
+logp(a|region with) = -8.89
+Back off to unigram
+alpha([]) = 2075
+c(view) = 0
+logp(view|with a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|a view) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(identification) = 0
+logp(identification|view to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|to identification) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(semiquantitative) = 0
+logp(semiquantitative|identification and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(estimation) = 0
+logp(estimation|and semiquantitative) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|semiquantitative estimation) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of the) = 18
+logp(the|estimation of) = -4.23
+Back off to unigram
+alpha([]) = 1987
+c(phases) = 1
+logp(phases|of the) = -14.4
+Back off to unigram
+alpha([]) = 2066
+c(formed) = 0
+logp(formed|the phases) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(under) = 0
+logp(under|phases formed) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(varying) = 0
+logp(varying|formed under) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(preparative) = 0
+logp(preparative|under varying) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(conditions) = 0
+logp(conditions|varying preparative) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|preparative conditions) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|conditions .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(words) = 1
+logp(words|<eos> <eos>) = -14.0
+Back off to unigram
+alpha([]) = 2066
+c(cannot) = 0
+logp(cannot|<eos> words) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(tell) = 0
+logp(tell|words cannot) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|cannot tell) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of the) = 18
+logp(the|tell of) = -4.23
+Back off to unigram
+alpha([]) = 1987
+c(undivided) = 0
+logp(undivided|of the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(attention) = 1
+logp(attention|the undivided) = -14.5
+Back off to unigram
+alpha([]) = 2123
+c(and) = 41
+logp(and|undivided attention) = -9.17
+Back off to unigram
+alpha([]) = 1762
+c(comfort) = 0
+logp(comfort|attention and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(their) = 7
+logp(their|and comfort) = -11.7
+Back off to unigram
+alpha([]) = 2126
+c(service) = 1
+logp(service|comfort their) = -14.5
+Back off to unigram
+alpha([]) = 2123
+c(gave) = 0
+logp(gave|their service) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|service gave) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(me) = 0
+logp(me|gave to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|to me) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|me .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> at) = 1
+logp(at|<eos> <eos>) = -7.16
+Back off to unigram
+alpha([]) = 2009
+c(present) = 0
+logp(present|<eos> at) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(all) = 5
+logp(all|at present) = -12.2
+Back off to unigram
+alpha([]) = 2122
+c(offenses) = 0
+logp(offenses|present all) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(must) = 1
+logp(must|all offenses) = -14.5
+Back off to unigram
+alpha([]) = 2135
+c(be) = 16
+logp(be|offenses must) = -10.5
+Back off to unigram
+alpha([]) = 2068
+c(taken) = 1
+logp(taken|must be) = -14.5
+Back off to 2-gram
+alpha(taken) = 1
+c(taken to) = 1
+logp(to|be taken) = -2.25
+Back off to unigram
+alpha([]) = 1889
+c(sixth) = 0
+logp(sixth|taken to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(district) = 0
+logp(district|to sixth) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(court) = 0
+logp(court|sixth district) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(for) = 14
+logp(for|district court) = -10.7
+Back off to unigram
+alpha([]) = 1824
+c(disposition) = 0
+logp(disposition|court for) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|for disposition) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|disposition .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> from) = 2
+logp(from|<eos> <eos>) = -6.16
+Back off to unigram
+alpha([]) = 2004
+c(its) = 4
+logp(its|<eos> from) = -12.4
+Back off to unigram
+alpha([]) = 2133
+c(inception) = 0
+logp(inception|from its) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(in) = 41
+logp(in|its inception) = -9.18
+Back off to unigram
+alpha([]) = 1894
+c(1920) = 0
+logp(1920|inception in) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(with) = 7
+logp(with|in 1920) = -11.7
+Back off to 2-gram
+alpha(with) = 7
+c(with the) = 4
+logp(the|1920 with) = -3.06
+Back off to unigram
+alpha([]) = 1987
+c(passage) = 0
+logp(passage|with the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|the passage) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(public) = 0
+logp(public|passage of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(law) = 0
+logp(law|of public) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(236) = 0
+logp(236|public law) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|law 236) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(66th) = 0
+logp(66th|236 ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(congress) = 0
+logp(congress|, 66th) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|66th congress) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, the) = 9
+logp(the|congress ,) = -5.71
+Back off to unigram
+alpha([]) = 1987
+c(purpose) = 0
+logp(purpose|, the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|the purpose) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of the) = 18
+logp(the|purpose of) = -4.23
+Back off to 2-gram
+alpha(the) = 102
+c(the vocational) = 1
+logp(vocational|of the) = -8.92
+Back off to unigram
+alpha([]) = 2135
+c(rehabilitation) = 0
+logp(rehabilitation|the vocational) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(program) = 1
+logp(program|vocational rehabilitation) = -14.5
+Back off to unigram
+alpha([]) = 2129
+c(has) = 2
+logp(has|rehabilitation program) = -13.5
+Back off to unigram
+alpha([]) = 2127
+c(been) = 2
+logp(been|program has) = -13.5
+Back off to unigram
+alpha([]) = 2035
+c(to) = 37
+logp(to|has been) = -9.26
+Back off to unigram
+alpha([]) = 1889
+c(assist) = 0
+logp(assist|been to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(the) = 122
+logp(the|to assist) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(states) = 0
+logp(states|assist the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|the states) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(by) = 12
+logp(by|states ,) = -10.5
+Back off to unigram
+alpha([]) = 1954
+c(means) = 2
+logp(means|, by) = -13.4
+Back off to unigram
+alpha([]) = 2111
+c(of) = 71
+logp(of|by means) = -8.37
+Back off to unigram
+alpha([]) = 1910
+c(grants-in-aid) = 0
+logp(grants-in-aid|means of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|of grants-in-aid) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, to) = 2
+logp(to|grants-in-aid ,) = -7.88
+Back off to unigram
+alpha([]) = 1889
+c(return) = 0
+logp(return|, to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(disabled) = 0
+logp(disabled|to return) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(men) = 4
+logp(men|return disabled) = -12.5
+Back off to unigram
+alpha([]) = 2029
+c(and) = 41
+logp(and|disabled men) = -9.1
+Back off to unigram
+alpha([]) = 1762
+c(women) = 0
+logp(women|men and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|and women) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(productive) = 0
+logp(productive|women to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|to productive) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(gainful) = 0
+logp(gainful|productive ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(employment) = 1
+logp(employment|, gainful) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(.) = 83
+logp(.|gainful employment) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|employment .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> for) = 1
+logp(for|<eos> <eos>) = -7.16
+Back off to unigram
+alpha([]) = 1824
+c(drugs) = 0
+logp(drugs|<eos> for) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(are) = 8
+logp(are|for drugs) = -11.5
+Back off to unigram
+alpha([]) = 1992
+c(in) = 41
+logp(in|drugs are) = -9.08
+Back off to unigram
+alpha([]) = 1894
+c(themselves) = 0
+logp(themselves|are in) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(no) = 2
+logp(no|in themselves) = -13.5
+Back off to unigram
+alpha([]) = 2053
+c(royal) = 0
+logp(royal|themselves no) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(road) = 1
+logp(road|no royal) = -14.5
+Back off to unigram
+alpha([]) = 2096
+c(to) = 37
+logp(to|royal road) = -9.3
+Back off to unigram
+alpha([]) = 1889
+c(creativity) = 0
+logp(creativity|road to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|to creativity) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|creativity .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> this) = 3
+logp(this|<eos> <eos>) = -5.57
+Back off to unigram
+alpha([]) = 2030
+c(strange) = 0
+logp(strange|<eos> this) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(person) = 0
+logp(person|this strange) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(quarrels) = 0
+logp(quarrels|strange person) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(with) = 7
+logp(with|person quarrels) = -11.7
+Back off to unigram
+alpha([]) = 2011
+c(a) = 47
+logp(a|quarrels with) = -8.89
+Back off to unigram
+alpha([]) = 2075
+c(cyclist) = 0
+logp(cyclist|with a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(because) = 5
+logp(because|a cyclist) = -12.2
+Back off to unigram
+alpha([]) = 2046
+c(the) = 122
+logp(the|cyclist because) = -7.54
+Back off to unigram
+alpha([]) = 1987
+c(latter) = 0
+logp(latter|because the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(is) = 12
+logp(is|the latter) = -11.0
+Back off to unigram
+alpha([]) = 1847
+c(using) = 2
+logp(using|latter is) = -13.3
+Back off to unigram
+alpha([]) = 2087
+c(the) = 122
+logp(the|is using) = -7.57
+Back off to unigram
+alpha([]) = 1987
+c(path) = 0
+logp(path|using the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(rather) = 2
+logp(rather|the path) = -13.5
+Back off to 2-gram
+alpha(rather) = 2
+c(rather than) = 1
+logp(than|path rather) = -3.25
+Back off to unigram
+alpha([]) = 2118
+c(the) = 122
+logp(the|rather than) = -7.59
+Back off to unigram
+alpha([]) = 1987
+c(highroad) = 0
+logp(highroad|than the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|the highroad) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|highroad .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(sir) = 0
+logp(sir|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(--) = 7
+logp(--|<eos> sir) = -11.7
+Back off to unigram
+alpha([]) = 1947
+c(an) = 14
+logp(an|sir --) = -10.6
+Back off to 2-gram
+alpha(an) = 14
+c(an old) = 1
+logp(old|-- an) = -6.06
+Back off to unigram
+alpha([]) = 2134
+c(man) = 1
+logp(man|an old) = -14.5
+Back off to unigram
+alpha([]) = 2130
+c(is) = 12
+logp(is|old man) = -10.9
+Back off to unigram
+alpha([]) = 1847
+c(kicked) = 0
+logp(kicked|man is) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|is kicked) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(death) = 0
+logp(death|kicked to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(by) = 12
+logp(by|to death) = -11.0
+Back off to unigram
+alpha([]) = 1954
+c(muggers) = 0
+logp(muggers|death by) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|by muggers) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|muggers .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> the) = 8
+logp(the|<eos> <eos>) = -4.16
+Back off to unigram
+alpha([]) = 1987
+c(other) = 2
+logp(other|<eos> the) = -13.4
+Back off to unigram
+alpha([]) = 2133
+c(possibility) = 0
+logp(possibility|the other) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(is) = 12
+logp(is|other possibility) = -11.0
+Back off to unigram
+alpha([]) = 1847
+c(to) = 37
+logp(to|possibility is) = -9.12
+Back off to 2-gram
+alpha(to) = 37
+c(to make) = 1
+logp(make|is to) = -7.46
+Back off to unigram
+alpha([]) = 2084
+c(arrangements) = 0
+logp(arrangements|to make) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(for) = 14
+logp(for|make arrangements) = -10.7
+Back off to unigram
+alpha([]) = 1824
+c(her) = 4
+logp(her|arrangements for) = -12.3
+Back off to unigram
+alpha([]) = 2133
+c(to) = 37
+logp(to|for her) = -9.32
+Back off to 2-gram
+alpha(to) = 37
+c(to let) = 1
+logp(let|her to) = -7.46
+Back off to unigram
+alpha([]) = 1986
+c(out) = 3
+logp(out|to let) = -12.8
+Back off to unigram
+alpha([]) = 1932
+c(one) = 2
+logp(one|let out) = -13.4
+Back off to unigram
+alpha([]) = 2133
+c(or) = 13
+logp(or|out one) = -10.8
+Back off to 2-gram
+alpha(or) = 13
+c(or two) = 1
+logp(two|one or) = -5.95
+Back off to unigram
+alpha([]) = 2127
+c(of) = 71
+logp(of|or two) = -8.38
+Back off to 2-gram
+alpha(of) = 71
+c(of the) = 18
+logp(the|two of) = -4.23
+Back off to unigram
+alpha([]) = 1987
+c(rooms) = 0
+logp(rooms|of the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|the rooms) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(some) = 7
+logp(some|rooms to) = -11.5
+Back off to unigram
+alpha([]) = 2061
+c(teacher) = 3
+logp(teacher|to some) = -12.9
+Back off to unigram
+alpha([]) = 2115
+c(of) = 71
+logp(of|some teacher) = -8.37
+Back off to unigram
+alpha([]) = 1910
+c(good) = 0
+logp(good|teacher of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(family) = 4
+logp(family|of good) = -12.5
+Back off to unigram
+alpha([]) = 2030
+c(or) = 13
+logp(or|good family) = -10.8
+Back off to unigram
+alpha([]) = 1932
+c(one) = 2
+logp(one|family or) = -13.4
+Back off to unigram
+alpha([]) = 2133
+c(of) = 71
+logp(of|or one) = -8.38
+Back off to unigram
+alpha([]) = 1910
+c(those) = 2
+logp(those|one of) = -13.4
+Back off to unigram
+alpha([]) = 2114
+c(solitary) = 0
+logp(solitary|of those) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(old) = 3
+logp(old|those solitary) = -13.0
+Back off to unigram
+alpha([]) = 2134
+c(ladies) = 0
+logp(ladies|solitary old) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(that) = 21
+logp(that|old ladies) = -10.1
+Back off to unigram
+alpha([]) = 1759
+c(tuxapoka) = 0
+logp(tuxapoka|ladies that) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(is) = 12
+logp(is|that tuxapoka) = -11.0
+Back off to unigram
+alpha([]) = 1847
+c(populated) = 0
+logp(populated|tuxapoka is) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(with) = 7
+logp(with|is populated) = -11.7
+Back off to unigram
+alpha([]) = 2011
+c(--) = 7
+logp(--|populated with) = -11.6
+Back off to unigram
+alpha([]) = 1947
+c(miss) = 0
+logp(miss|with --) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(edna) = 0
+logp(edna|-- miss) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(whittaker) = 0
+logp(whittaker|miss edna) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|edna whittaker) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, for) = 1
+logp(for|whittaker ,) = -8.88
+Back off to unigram
+alpha([]) = 1824
+c(example) = 1
+logp(example|, for) = -14.3
+Back off to unigram
+alpha([]) = 2066
+c(.) = 83
+logp(.|for example) = -8.11
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|example .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(factories) = 0
+logp(factories|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(are) = 8
+logp(are|<eos> factories) = -11.5
+Back off to unigram
+alpha([]) = 1992
+c(located) = 1
+logp(located|factories are) = -14.4
+Back off to unigram
+alpha([]) = 2096
+c(here) = 0
+logp(here|are located) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|located here) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(in) = 41
+logp(in|here and) = -8.9
+Back off to unigram
+alpha([]) = 1894
+c(prattville) = 0
+logp(prattville|and in) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|in prattville) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(ala.) = 0
+logp(ala.|prattville ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|, ala.) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|ala. .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> ``) = 10
+logp(``|<eos> <eos>) = -3.84
+Back off to unigram
+alpha([]) = 2024
+c(who) = 7
+logp(who|<eos> ``) = -11.6
+Back off to unigram
+alpha([]) = 2119
+c('') = 12
+logp(''|`` who) = -10.9
+Back off to 2-gram
+alpha('') = 12
+c('' ?) = 3
+logp(?|who '') = -4.25
+Back off to 3-gram
+alpha('' ?) = 3
+c('' ? ?) = 3
+logp(?|'' ?) = -0.515
+Back off to 3-gram
+alpha(? ?) = 4
+c(? ? <eos>) = 4
+logp(<eos>|? ?) = -0.515
+Back off to 3-gram
+alpha(? <eos>) = 4
+c(? <eos> <eos>) = 4
+logp(<eos>|? <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(evaluation) = 0
+logp(evaluation|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(may) = 2
+logp(may|<eos> evaluation) = -13.5
+Back off to 2-gram
+alpha(may) = 2
+c(may be) = 1
+logp(be|evaluation may) = -3.25
+Back off to unigram
+alpha([]) = 2068
+c(made) = 1
+logp(made|may be) = -14.5
+Back off to unigram
+alpha([]) = 2100
+c(on) = 11
+logp(on|be made) = -11.1
+Back off to 2-gram
+alpha(on) = 11
+c(on either) = 1
+logp(either|made on) = -5.71
+Back off to unigram
+alpha([]) = 2066
+c(a) = 47
+logp(a|on either) = -8.93
+Back off to unigram
+alpha([]) = 2075
+c(soil-removal) = 0
+logp(soil-removal|either a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(or) = 13
+logp(or|a soil-removal) = -10.8
+Back off to 2-gram
+alpha(or) = 13
+c(or a) = 1
+logp(a|soil-removal or) = -5.95
+Back off to unigram
+alpha([]) = 2075
+c(grease-removal) = 0
+logp(grease-removal|or a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(basis) = 0
+logp(basis|a grease-removal) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(as) = 17
+logp(as|grease-removal basis) = -10.4
+Back off to unigram
+alpha([]) = 1789
+c(desired) = 0
+logp(desired|basis as) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|as desired) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|desired .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> the) = 8
+logp(the|<eos> <eos>) = -4.16
+Back off to unigram
+alpha([]) = 1987
+c(tract) = 0
+logp(tract|<eos> the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(is) = 12
+logp(is|the tract) = -11.0
+Back off to unigram
+alpha([]) = 1847
+c(bounded) = 0
+logp(bounded|tract is) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(by) = 12
+logp(by|is bounded) = -11.0
+Back off to unigram
+alpha([]) = 1954
+c(island) = 0
+logp(island|bounded by) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(ave.) = 0
+logp(ave.|by island) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|island ave.) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(dicks) = 0
+logp(dicks|ave. ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(ave.) = 0
+logp(ave.|, dicks) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|dicks ave.) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(61st) = 0
+logp(61st|ave. ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(st.) = 0
+logp(st.|, 61st) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|61st st.) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, and) = 5
+logp(and|st. ,) = -6.56
+Back off to unigram
+alpha([]) = 1762
+c(eastwick) = 0
+logp(eastwick|, and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(ave.) = 0
+logp(ave.|and eastwick) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|eastwick ave.) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|ave. .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(other) = 2
+logp(other|<eos> <eos>) = -13.0
+Back off to unigram
+alpha([]) = 2133
+c(good) = 0
+logp(good|<eos> other) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(miles) = 0
+logp(miles|other good) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(have) = 7
+logp(have|good miles) = -11.7
+Back off to 2-gram
+alpha(have) = 7
+c(have been) = 1
+logp(been|miles have) = -5.06
+Back off to unigram
+alpha([]) = 2035
+c(by) = 12
+logp(by|have been) = -10.9
+Back off to unigram
+alpha([]) = 1954
+c(debonnie) = 0
+logp(debonnie|been by) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(() = 3
+logp((|by debonnie) = -13.0
+Back off to unigram
+alpha([]) = 2013
+c(dale) = 0
+logp(dale|debonnie () = -inf
+Back off to unigram
+alpha([]) = 2137
+c(frost-debby) = 0
+logp(frost-debby|( dale) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(hanover) = 0
+logp(hanover|dale frost-debby) = -inf
+Back off to unigram
+alpha([]) = 2137
+c()) = 3
+logp()|frost-debby hanover) = -13.0
+Back off to unigram
+alpha([]) = 1955
+c(and) = 41
+logp(and|hanover )) = -9.05
+Back off to unigram
+alpha([]) = 1762
+c(prompt) = 0
+logp(prompt|) and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(time) = 2
+logp(time|and prompt) = -13.5
+Back off to unigram
+alpha([]) = 2031
+c(() = 3
+logp((|prompt time) = -12.9
+Back off to unigram
+alpha([]) = 2013
+c(adios-on) = 0
+logp(adios-on|time () = -inf
+Back off to unigram
+alpha([]) = 2137
+c(time) = 2
+logp(time|( adios-on) = -13.5
+Back off to unigram
+alpha([]) = 2031
+c()) = 3
+logp()|adios-on time) = -12.9
+Back off to unigram
+alpha([]) = 1955
+c(in) = 41
+logp(in|time )) = -9.05
+Back off to unigram
+alpha([]) = 1894
+c(2:28-:36) = 0
+logp(2:28-:36|) in) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(;) = 8
+logp(;|in 2:28-:36) = -11.5
+Back off to 2-gram
+alpha(;) = 8
+c(; ;) = 4
+logp(;|2:28-:36 ;) = -3.25
+Back off to 3-gram
+alpha(; ;) = 4
+c(; ; <eos>) = 4
+logp(<eos>|; ;) = -0.515
+Back off to 3-gram
+alpha(; <eos>) = 4
+c(; <eos> <eos>) = 4
+logp(<eos>|; <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> a) = 1
+logp(a|<eos> <eos>) = -7.16
+Back off to unigram
+alpha([]) = 2075
+c(man) = 1
+logp(man|<eos> a) = -14.5
+Back off to unigram
+alpha([]) = 2130
+c(gets) = 0
+logp(gets|a man) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(old) = 3
+logp(old|man gets) = -13.0
+Back off to unigram
+alpha([]) = 2134
+c(anyhow) = 0
+logp(anyhow|gets old) = -inf
+Back off to unigram
+alpha([]) = 2137
+c('') = 12
+logp(''|old anyhow) = -11.0
+Back off to 2-gram
+alpha('') = 12
+c('' .) = 5
+logp(.|anyhow '') = -3.51
+Back off to 3-gram
+alpha('' .) = 5
+c('' . <eos>) = 5
+logp(<eos>|'' .) = -0.515
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(these) = 3
+logp(these|<eos> <eos>) = -12.4
+Back off to unigram
+alpha([]) = 2127
+c(factors) = 0
+logp(factors|<eos> these) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(practically) = 0
+logp(practically|these factors) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(insure) = 0
+logp(insure|factors practically) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(that) = 21
+logp(that|practically insure) = -10.1
+Back off to unigram
+alpha([]) = 1759
+c(no) = 2
+logp(no|insure that) = -13.3
+Back off to unigram
+alpha([]) = 2053
+c(single) = 1
+logp(single|that no) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(financing) = 0
+logp(financing|no single) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(formula) = 0
+logp(formula|single financing) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(is) = 12
+logp(is|financing formula) = -11.0
+Back off to unigram
+alpha([]) = 1847
+c(feasible) = 0
+logp(feasible|formula is) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(;) = 8
+logp(;|is feasible) = -11.5
+Back off to 2-gram
+alpha(;) = 8
+c(; ;) = 4
+logp(;|feasible ;) = -3.25
+Back off to 3-gram
+alpha(; ;) = 4
+c(; ; <eos>) = 4
+logp(<eos>|; ;) = -0.515
+Back off to 3-gram
+alpha(; <eos>) = 4
+c(; <eos> <eos>) = 4
+logp(<eos>|; <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(first) = 2
+logp(first|<eos> <eos>) = -13.0
+Back off to unigram
+alpha([]) = 2134
+c(kentucky) = 0
+logp(kentucky|<eos> first) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|first kentucky) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|kentucky .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(carl) = 0
+logp(carl|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(thought) = 0
+logp(thought|<eos> carl) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(the) = 122
+logp(the|carl thought) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(question) = 1
+logp(question|thought the) = -14.4
+Back off to unigram
+alpha([]) = 2125
+c(over) = 0
+logp(over|the question) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(slowly) = 0
+logp(slowly|question over) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|over slowly) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(answered) = 0
+logp(answered|slowly and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(:) = 3
+logp(:|and answered) = -13.0
+Back off to unigram
+alpha([]) = 2012
+c(``) = 15
+logp(``|answered :) = -10.5
+Back off to unigram
+alpha([]) = 2024
+c(i) = 3
+logp(i|: ``) = -12.9
+Back off to unigram
+alpha([]) = 2123
+c(know) = 0
+logp(know|`` i) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(a) = 47
+logp(a|i know) = -8.98
+Back off to unigram
+alpha([]) = 2075
+c(starving) = 0
+logp(starving|know a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(man) = 1
+logp(man|a starving) = -14.5
+Back off to 2-gram
+alpha(man) = 1
+c(man who) = 1
+logp(who|starving man) = -2.25
+Back off to unigram
+alpha([]) = 2119
+c(is) = 12
+logp(is|man who) = -10.9
+Back off to unigram
+alpha([]) = 1847
+c(fed) = 0
+logp(fed|who is) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(never) = 0
+logp(never|is fed) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(remembers) = 0
+logp(remembers|fed never) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(all) = 5
+logp(all|never remembers) = -12.2
+Back off to unigram
+alpha([]) = 2122
+c(the) = 122
+logp(the|remembers all) = -7.59
+Back off to unigram
+alpha([]) = 1987
+c(pangs) = 0
+logp(pangs|all the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|the pangs) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of his) = 1
+logp(his|pangs of) = -8.4
+Back off to unigram
+alpha([]) = 2118
+c(starvation) = 0
+logp(starvation|of his) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|his starvation) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, i) = 1
+logp(i|starvation ,) = -8.88
+Back off to unigram
+alpha([]) = 2123
+c(know) = 0
+logp(know|, i) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(that) = 21
+logp(that|i know) = -10.1
+Back off to unigram
+alpha([]) = 1759
+c('') = 12
+logp(''|know that) = -10.7
+Back off to 2-gram
+alpha('') = 12
+c('' .) = 5
+logp(.|that '') = -3.51
+Back off to 3-gram
+alpha('' .) = 5
+c('' . <eos>) = 5
+logp(<eos>|'' .) = -0.515
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> the) = 8
+logp(the|<eos> <eos>) = -4.16
+Back off to unigram
+alpha([]) = 1987
+c(initiation) = 0
+logp(initiation|<eos> the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|the initiation) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(sampling) = 0
+logp(sampling|initiation of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(censuses) = 0
+logp(censuses|of sampling) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(in) = 41
+logp(in|sampling censuses) = -9.18
+Back off to unigram
+alpha([]) = 1894
+c(ruanda-urundi) = 0
+logp(ruanda-urundi|censuses in) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(() = 3
+logp((|in ruanda-urundi) = -13.0
+Back off to unigram
+alpha([]) = 2013
+c(1952) = 0
+logp(1952|ruanda-urundi () = -inf
+Back off to unigram
+alpha([]) = 2137
+c()) = 3
+logp()|( 1952) = -13.0
+Back off to unigram
+alpha([]) = 1955
+c(and) = 41
+logp(and|1952 )) = -9.05
+Back off to unigram
+alpha([]) = 1762
+c(in) = 41
+logp(in|) and) = -8.9
+Back off to 2-gram
+alpha(in) = 41
+c(in the) = 10
+logp(the|and in) = -4.29
+Back off to unigram
+alpha([]) = 1987
+c(congo) = 0
+logp(congo|in the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(() = 3
+logp((|the congo) = -13.0
+Back off to unigram
+alpha([]) = 2013
+c(1955) = 1
+logp(1955|congo () = -14.4
+Back off to unigram
+alpha([]) = 2135
+c(-) = 0
+logp(-|( 1955) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(57) = 0
+logp(57|1955 -) = -inf
+Back off to unigram
+alpha([]) = 2137
+c()) = 3
+logp()|- 57) = -13.0
+Back off to unigram
+alpha([]) = 1955
+c(were) = 6
+logp(were|57 )) = -11.8
+Back off to unigram
+alpha([]) = 2003
+c(major) = 1
+logp(major|) were) = -14.4
+Back off to unigram
+alpha([]) = 2136
+c(advances) = 0
+logp(advances|were major) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|major advances) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|advances .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> this) = 3
+logp(this|<eos> <eos>) = -5.57
+Back off to unigram
+alpha([]) = 2030
+c(constitutes) = 0
+logp(constitutes|<eos> this) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(about) = 2
+logp(about|this constitutes) = -13.5
+Back off to unigram
+alpha([]) = 2015
+c(17) = 0
+logp(17|constitutes about) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(percent) = 0
+logp(percent|about 17) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|17 percent) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of the) = 18
+logp(the|percent of) = -4.23
+Back off to unigram
+alpha([]) = 1987
+c(long-range) = 0
+logp(long-range|of the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(requirements) = 0
+logp(requirements|the long-range) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(for) = 14
+logp(for|long-range requirements) = -10.7
+Back off to unigram
+alpha([]) = 1824
+c(these) = 3
+logp(these|requirements for) = -12.7
+Back off to unigram
+alpha([]) = 2127
+c(facilities) = 0
+logp(facilities|for these) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|these facilities) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|facilities .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> the) = 8
+logp(the|<eos> <eos>) = -4.16
+Back off to unigram
+alpha([]) = 1987
+c(observer) = 0
+logp(observer|<eos> the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|the observer) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(television) = 0
+logp(television|observer of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(or) = 13
+logp(or|of television) = -10.8
+Back off to unigram
+alpha([]) = 1932
+c(other) = 2
+logp(other|television or) = -13.4
+Back off to unigram
+alpha([]) = 2133
+c(products) = 1
+logp(products|or other) = -14.5
+Back off to unigram
+alpha([]) = 2038
+c(for) = 14
+logp(for|other products) = -10.7
+Back off to 2-gram
+alpha(for) = 14
+c(for a) = 2
+logp(a|products for) = -5.06
+Back off to unigram
+alpha([]) = 2075
+c(mass) = 0
+logp(mass|for a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(audience) = 0
+logp(audience|a mass) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(has) = 2
+logp(has|mass audience) = -13.5
+Back off to unigram
+alpha([]) = 2127
+c(only) = 1
+logp(only|audience has) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(a) = 47
+logp(a|has only) = -8.98
+Back off to unigram
+alpha([]) = 2075
+c(permit) = 0
+logp(permit|only a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|a permit) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(be) = 16
+logp(be|permit to) = -10.4
+Back off to unigram
+alpha([]) = 2068
+c(,) = 99
+logp(,|to be) = -7.86
+Back off to unigram
+alpha([]) = 1595
+c(like) = 1
+logp(like|be ,) = -14.1
+Back off to unigram
+alpha([]) = 2096
+c(the) = 122
+logp(the|, like) = -7.58
+Back off to unigram
+alpha([]) = 1987
+c(models) = 0
+logp(models|like the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(he) = 23
+logp(he|the models) = -10.0
+Back off to unigram
+alpha([]) = 2080
+c(sees) = 0
+logp(sees|models he) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|he sees) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(even) = 1
+logp(even|sees ,) = -14.1
+Back off to unigram
+alpha([]) = 2133
+c(more) = 2
+logp(more|, even) = -13.5
+Back off to unigram
+alpha([]) = 2065
+c(like) = 1
+logp(like|even more) = -14.5
+Back off to unigram
+alpha([]) = 2096
+c(everybody) = 0
+logp(everybody|more like) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(else) = 0
+logp(else|like everybody) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|everybody else) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|else .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> in) = 4
+logp(in|<eos> <eos>) = -5.16
+Back off to unigram
+alpha([]) = 1894
+c(china) = 0
+logp(china|<eos> in) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(it) = 16
+logp(it|in china) = -10.5
+Back off to 2-gram
+alpha(it) = 16
+c(it was) = 1
+logp(was|china it) = -6.25
+Back off to 2-gram
+alpha(was) = 11
+c(was a) = 2
+logp(a|it was) = -4.71
+Back off to unigram
+alpha([]) = 2075
+c(baby) = 0
+logp(baby|was a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(sitting) = 1
+logp(sitting|a baby) = -14.5
+Back off to unigram
+alpha([]) = 2096
+c(on) = 11
+logp(on|baby sitting) = -11.0
+Back off to 2-gram
+alpha(on) = 11
+c(on a) = 1
+logp(a|sitting on) = -5.71
+Back off to unigram
+alpha([]) = 2075
+c(railroad) = 0
+logp(railroad|on a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(platform) = 0
+logp(platform|a railroad) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|railroad platform) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(smudged) = 0
+logp(smudged|platform ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|, smudged) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(blood-specked) = 0
+logp(blood-specked|smudged ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|, blood-specked) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, with) = 1
+logp(with|blood-specked ,) = -8.88
+Back off to 2-gram
+alpha(with) = 6
+c(with the) = 4
+logp(the|, with) = -2.84
+Back off to unigram
+alpha([]) = 1987
+c(village) = 1
+logp(village|with the) = -14.4
+Back off to unigram
+alpha([]) = 2096
+c(burning) = 0
+logp(burning|the village) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(about) = 2
+logp(about|village burning) = -13.5
+Back off to unigram
+alpha([]) = 2015
+c(him) = 4
+logp(him|burning about) = -12.5
+Back off to unigram
+alpha([]) = 1952
+c(and) = 41
+logp(and|about him) = -9.05
+Back off to unigram
+alpha([]) = 1762
+c(shells) = 0
+logp(shells|him and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(exploding) = 0
+logp(exploding|and shells) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|shells exploding) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|exploding .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> he) = 4
+logp(he|<eos> <eos>) = -5.16
+Back off to 2-gram
+alpha(he) = 17
+c(he was) = 1
+logp(was|<eos> he) = -6.34
+Back off to unigram
+alpha([]) = 2065
+c(taken) = 1
+logp(taken|he was) = -14.5
+Back off to unigram
+alpha([]) = 2100
+c(aback) = 0
+logp(aback|was taken) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|taken aback) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|aback .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> the) = 8
+logp(the|<eos> <eos>) = -4.16
+Back off to unigram
+alpha([]) = 1987
+c(gas) = 0
+logp(gas|<eos> the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(flow) = 0
+logp(flow|the gas) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(through) = 1
+logp(through|gas flow) = -14.5
+Back off to unigram
+alpha([]) = 2133
+c(a) = 47
+logp(a|flow through) = -8.98
+Back off to unigram
+alpha([]) = 2075
+c(plasma) = 0
+logp(plasma|through a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(generator) = 0
+logp(generator|a plasma) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(will) = 6
+logp(will|plasma generator) = -12.0
+Back off to unigram
+alpha([]) = 2070
+c(modify) = 0
+logp(modify|generator will) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(these) = 3
+logp(these|will modify) = -13.0
+Back off to unigram
+alpha([]) = 2127
+c(conditions) = 0
+logp(conditions|modify these) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(;) = 8
+logp(;|these conditions) = -11.5
+Back off to 2-gram
+alpha(;) = 8
+c(; ;) = 4
+logp(;|conditions ;) = -3.25
+Back off to 3-gram
+alpha(; ;) = 4
+c(; ; <eos>) = 4
+logp(<eos>|; ;) = -0.515
+Back off to 3-gram
+alpha(; <eos>) = 4
+c(; <eos> <eos>) = 4
+logp(<eos>|; <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> ``) = 10
+logp(``|<eos> <eos>) = -3.84
+Back off to unigram
+alpha([]) = 2024
+c(take) = 2
+logp(take|<eos> ``) = -13.5
+Back off to unigram
+alpha([]) = 2086
+c(one) = 2
+logp(one|`` take) = -13.5
+Back off to unigram
+alpha([]) = 2133
+c(side) = 0
+logp(side|take one) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|one side) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of the) = 18
+logp(the|side of) = -4.23
+Back off to unigram
+alpha([]) = 1987
+c(street) = 0
+logp(street|of the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|the street) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, and) = 5
+logp(and|street ,) = -6.56
+Back off to unigram
+alpha([]) = 1762
+c(i'll) = 0
+logp(i'll|, and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(take) = 2
+logp(take|and i'll) = -13.5
+Back off to unigram
+alpha([]) = 2086
+c(the) = 122
+logp(the|i'll take) = -7.57
+Back off to unigram
+alpha([]) = 1987
+c(other) = 2
+logp(other|take the) = -13.4
+Back off to unigram
+alpha([]) = 2133
+c('') = 12
+logp(''|the other) = -10.9
+Back off to 2-gram
+alpha('') = 12
+c('' ,) = 2
+logp(,|other '') = -4.84
+Back off to 3-gram
+alpha('' ,) = 2
+c('' , he) = 1
+logp(he|'' ,) = -1.51
+Back off to unigram
+alpha([]) = 2080
+c(proposed) = 0
+logp(proposed|, he) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|he proposed) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|proposed .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(asked) = 0
+logp(asked|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(the) = 122
+logp(the|<eos> asked) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(gas) = 0
+logp(gas|asked the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(station) = 0
+logp(station|the gas) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(man) = 1
+logp(man|gas station) = -14.5
+Back off to unigram
+alpha([]) = 2130
+c(.) = 83
+logp(.|station man) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|man .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> the) = 8
+logp(the|<eos> <eos>) = -4.16
+Back off to unigram
+alpha([]) = 1987
+c(figure) = 0
+logp(figure|<eos> the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(on) = 11
+logp(on|the figure) = -11.1
+Back off to 2-gram
+alpha(on) = 11
+c(on the) = 5
+logp(the|figure on) = -3.39
+Back off to unigram
+alpha([]) = 1987
+c(earth) = 0
+logp(earth|on the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(halted) = 0
+logp(halted|the earth) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|earth halted) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(seemingly) = 0
+logp(seemingly|halted ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(bewildered) = 0
+logp(bewildered|, seemingly) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|seemingly bewildered) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|bewildered .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> the) = 8
+logp(the|<eos> <eos>) = -4.16
+Back off to unigram
+alpha([]) = 1987
+c(rachmaninoff) = 0
+logp(rachmaninoff|<eos> the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(prelude) = 0
+logp(prelude|the rachmaninoff) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(no.) = 0
+logp(no.|rachmaninoff prelude) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(12) = 0
+logp(12|prelude no.) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|no. 12) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(op.) = 0
+logp(op.|12 ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(32) = 0
+logp(32|, op.) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|op. 32) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, for) = 1
+logp(for|32 ,) = -8.88
+Back off to unigram
+alpha([]) = 1824
+c(instance) = 0
+logp(instance|, for) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|for instance) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(gave) = 0
+logp(gave|instance ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(her) = 4
+logp(her|, gave) = -12.5
+Back off to unigram
+alpha([]) = 2133
+c(an) = 14
+logp(an|gave her) = -10.7
+Back off to unigram
+alpha([]) = 2119
+c(opportunity) = 0
+logp(opportunity|her an) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|an opportunity) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(exploit) = 0
+logp(exploit|opportunity to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(one) = 2
+logp(one|to exploit) = -13.5
+Back off to unigram
+alpha([]) = 2133
+c(of) = 71
+logp(of|exploit one) = -8.38
+Back off to 2-gram
+alpha(of) = 71
+c(of her) = 2
+logp(her|one of) = -7.4
+Back off to unigram
+alpha([]) = 2133
+c(special) = 0
+logp(special|of her) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(facilities) = 0
+logp(facilities|her special) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(--) = 7
+logp(--|special facilities) = -11.7
+Back off to unigram
+alpha([]) = 1947
+c(the) = 122
+logp(the|facilities --) = -7.47
+Back off to unigram
+alpha([]) = 1987
+c(ability) = 0
+logp(ability|-- the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|the ability) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(produce) = 0
+logp(produce|ability to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(fine) = 1
+logp(fine|to produce) = -14.5
+Back off to unigram
+alpha([]) = 2129
+c(deep-sounding) = 0
+logp(deep-sounding|produce fine) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(bass) = 0
+logp(bass|fine deep-sounding) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(tones) = 0
+logp(tones|deep-sounding bass) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(while) = 1
+logp(while|bass tones) = -14.5
+Back off to unigram
+alpha([]) = 2133
+c(contrasting) = 0
+logp(contrasting|tones while) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(them) = 2
+logp(them|while contrasting) = -13.5
+Back off to unigram
+alpha([]) = 2095
+c(simultaneously) = 0
+logp(simultaneously|contrasting them) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(with) = 7
+logp(with|them simultaneously) = -11.7
+Back off to unigram
+alpha([]) = 2011
+c(fine) = 1
+logp(fine|simultaneously with) = -14.4
+Back off to unigram
+alpha([]) = 2129
+c(silver) = 0
+logp(silver|with fine) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(filagree) = 0
+logp(filagree|fine silver) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(in) = 41
+logp(in|silver filagree) = -9.18
+Back off to 2-gram
+alpha(in) = 41
+c(in the) = 10
+logp(the|filagree in) = -4.29
+Back off to unigram
+alpha([]) = 1987
+c(treble) = 0
+logp(treble|in the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|the treble) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|treble .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(you'll) = 0
+logp(you'll|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(foil) = 0
+logp(foil|<eos> you'll) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(them) = 2
+logp(them|you'll foil) = -13.5
+Back off to unigram
+alpha([]) = 2095
+c(in) = 41
+logp(in|foil them) = -9.15
+Back off to unigram
+alpha([]) = 1894
+c(droves) = 0
+logp(droves|them in) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|in droves) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(along) = 0
+logp(along|droves ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(with) = 7
+logp(with|, along) = -11.7
+Back off to unigram
+alpha([]) = 2011
+c(their) = 7
+logp(their|along with) = -11.6
+Back off to unigram
+alpha([]) = 2126
+c(pal) = 0
+logp(pal|with their) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(humidity) = 0
+logp(humidity|their pal) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|pal humidity) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(by) = 12
+logp(by|humidity ,) = -10.5
+Back off to unigram
+alpha([]) = 1954
+c(having) = 1
+logp(having|, by) = -14.4
+Back off to unigram
+alpha([]) = 2136
+c(and) = 41
+logp(and|by having) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(using) = 2
+logp(using|having and) = -13.3
+Back off to 2-gram
+alpha(using) = 2
+c(using a) = 1
+logp(a|and using) = -3.25
+Back off to unigram
+alpha([]) = 2075
+c(kitchen) = 0
+logp(kitchen|using a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(range) = 0
+logp(range|a kitchen) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(exhaust) = 0
+logp(exhaust|kitchen range) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(fan) = 0
+logp(fan|range exhaust) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|exhaust fan) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, a) = 1
+logp(a|fan ,) = -8.88
+Back off to unigram
+alpha([]) = 2075
+c(bathroom) = 0
+logp(bathroom|, a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(ventilator) = 0
+logp(ventilator|a bathroom) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(for) = 14
+logp(for|bathroom ventilator) = -10.7
+Back off to unigram
+alpha([]) = 1824
+c(when) = 5
+logp(when|ventilator for) = -12.0
+Back off to unigram
+alpha([]) = 1991
+c(you) = 9
+logp(you|for when) = -11.3
+Back off to unigram
+alpha([]) = 1955
+c(shower) = 0
+logp(shower|when you) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|you shower) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, and) = 5
+logp(and|shower ,) = -6.56
+Back off to unigram
+alpha([]) = 1762
+c(an) = 14
+logp(an|, and) = -10.4
+Back off to unigram
+alpha([]) = 2119
+c(outside) = 0
+logp(outside|and an) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(vent) = 0
+logp(vent|an outside) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(for) = 14
+logp(for|outside vent) = -10.7
+Back off to 2-gram
+alpha(for) = 14
+c(for the) = 1
+logp(the|vent for) = -6.06
+Back off to unigram
+alpha([]) = 1987
+c(clothes) = 0
+logp(clothes|for the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(drier) = 0
+logp(drier|the clothes) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|clothes drier) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|drier .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> ``) = 10
+logp(``|<eos> <eos>) = -3.84
+Back off to unigram
+alpha([]) = 2024
+c(i) = 3
+logp(i|<eos> ``) = -12.9
+Back off to unigram
+alpha([]) = 2123
+c(feel) = 0
+logp(feel|`` i) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(i) = 3
+logp(i|i feel) = -13.0
+Back off to unigram
+alpha([]) = 2123
+c(must) = 1
+logp(must|feel i) = -14.5
+Back off to unigram
+alpha([]) = 2135
+c(answer) = 0
+logp(answer|i must) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(the) = 122
+logp(the|must answer) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(question) = 1
+logp(question|answer the) = -14.4
+Back off to unigram
+alpha([]) = 2125
+c('') = 12
+logp(''|the question) = -10.9
+Back off to 2-gram
+alpha('') = 12
+c('' ,) = 2
+logp(,|question '') = -4.84
+Back off to 3-gram
+alpha('' ,) = 2
+c('' , he) = 1
+logp(he|'' ,) = -1.51
+Back off to 3-gram
+alpha(, he) = 2
+c(, he said) = 1
+logp(said|, he) = -1.51
+Back off to 2-gram
+alpha(said) = 2
+c(said ,) = 1
+logp(,|he said) = -3.25
+Back off to 3-gram
+alpha(said ,) = 1
+c(said , ``) = 1
+logp(``|said ,) = -0.515
+Back off to unigram
+alpha([]) = 2024
+c(since) = 1
+logp(since|, ``) = -14.5
+Back off to unigram
+alpha([]) = 2130
+c(the) = 122
+logp(the|`` since) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(onus) = 0
+logp(onus|since the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(later) = 0
+logp(later|the onus) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|onus later) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(if) = 9
+logp(if|later ,) = -10.9
+Back off to 2-gram
+alpha(if) = 9
+c(if any) = 1
+logp(any|, if) = -5.42
+Back off to unigram
+alpha([]) = 2125
+c(,) = 99
+logp(,|if any) = -7.9
+Back off to unigram
+alpha([]) = 1595
+c(should) = 3
+logp(should|any ,) = -12.5
+Back off to unigram
+alpha([]) = 2119
+c(fall) = 1
+logp(fall|, should) = -14.5
+Back off to unigram
+alpha([]) = 2100
+c(on) = 11
+logp(on|should fall) = -11.1
+Back off to unigram
+alpha([]) = 1951
+c(me) = 0
+logp(me|fall on) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(--) = 7
+logp(--|on me) = -11.7
+Back off to unigram
+alpha([]) = 1947
+c(i) = 3
+logp(i|me --) = -12.8
+Back off to unigram
+alpha([]) = 2123
+c(don't) = 0
+logp(don't|-- i) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(relish) = 0
+logp(relish|i don't) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(recriminations) = 0
+logp(recriminations|don't relish) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(spread) = 0
+logp(spread|relish recriminations) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(broadcast) = 0
+logp(broadcast|recriminations spread) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(outside) = 0
+logp(outside|spread broadcast) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(my) = 0
+logp(my|broadcast outside) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(family) = 4
+logp(family|outside my) = -12.5
+Back off to unigram
+alpha([]) = 2030
+c(.) = 83
+logp(.|my family) = -8.09
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|family .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> the) = 8
+logp(the|<eos> <eos>) = -4.16
+Back off to unigram
+alpha([]) = 1987
+c(facts) = 0
+logp(facts|<eos> the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|the facts) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, he) = 2
+logp(he|facts ,) = -7.88
+Back off to unigram
+alpha([]) = 2080
+c(adds) = 0
+logp(adds|, he) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|he adds) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(are) = 8
+logp(are|adds ,) = -11.1
+Back off to unigram
+alpha([]) = 1992
+c(hidden) = 0
+logp(hidden|, are) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(from) = 11
+logp(from|are hidden) = -11.1
+Back off to unigram
+alpha([]) = 2004
+c(public) = 0
+logp(public|hidden from) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(view) = 0
+logp(view|from public) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(by) = 12
+logp(by|public view) = -11.0
+Back off to unigram
+alpha([]) = 1954
+c(squeamish) = 0
+logp(squeamish|view by) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(objections) = 0
+logp(objections|by squeamish) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|squeamish objections) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(calling) = 0
+logp(calling|objections to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(bad) = 1
+logp(bad|to calling) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(conditions) = 0
+logp(conditions|calling bad) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(by) = 12
+logp(by|bad conditions) = -11.0
+Back off to unigram
+alpha([]) = 1954
+c(their) = 7
+logp(their|conditions by) = -11.6
+Back off to unigram
+alpha([]) = 2126
+c(right) = 2
+logp(right|by their) = -13.5
+Back off to unigram
+alpha([]) = 2042
+c(name) = 1
+logp(name|their right) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(and) = 41
+logp(and|right name) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(by) = 12
+logp(by|name and) = -10.7
+Back off to unigram
+alpha([]) = 1954
+c(insistence) = 0
+logp(insistence|and by) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(on) = 11
+logp(on|by insistence) = -11.1
+Back off to unigram
+alpha([]) = 1951
+c(token) = 0
+logp(token|insistence on) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(integration) = 0
+logp(integration|on token) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(rather) = 2
+logp(rather|token integration) = -13.5
+Back off to 2-gram
+alpha(rather) = 2
+c(rather than) = 1
+logp(than|integration rather) = -3.25
+Back off to unigram
+alpha([]) = 2118
+c(on) = 11
+logp(on|rather than) = -11.1
+Back off to unigram
+alpha([]) = 1951
+c(real) = 1
+logp(real|than on) = -14.4
+Back off to unigram
+alpha([]) = 2135
+c(improvement) = 0
+logp(improvement|on real) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|real improvement) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of the) = 18
+logp(the|improvement of) = -4.23
+Back off to unigram
+alpha([]) = 1987
+c(schools) = 1
+logp(schools|of the) = -14.4
+Back off to unigram
+alpha([]) = 2136
+c(,) = 99
+logp(,|the schools) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(regardless) = 0
+logp(regardless|schools ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|, regardless) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of the) = 18
+logp(the|regardless of) = -4.23
+Back off to unigram
+alpha([]) = 1987
+c(color) = 1
+logp(color|of the) = -14.4
+Back off to unigram
+alpha([]) = 2135
+c(of) = 71
+logp(of|the color) = -8.38
+Back off to 2-gram
+alpha(of) = 71
+c(of their) = 3
+logp(their|color of) = -6.82
+Back off to unigram
+alpha([]) = 2126
+c(students) = 1
+logp(students|of their) = -14.5
+Back off to 2-gram
+alpha(students) = 1
+c(students .) = 1
+logp(.|their students) = -2.25
+Back off to 3-gram
+alpha(students .) = 1
+c(students . <eos>) = 1
+logp(<eos>|students .) = -0.515
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> they) = 2
+logp(they|<eos> <eos>) = -6.16
+Back off to unigram
+alpha([]) = 2131
+c(know) = 0
+logp(know|<eos> they) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(it) = 16
+logp(it|they know) = -10.5
+Back off to 2-gram
+alpha(it) = 16
+c(it is) = 2
+logp(is|know it) = -5.25
+Back off to 2-gram
+alpha(is) = 10
+c(is the) = 1
+logp(the|it is) = -5.57
+Back off to unigram
+alpha([]) = 1987
+c(chief) = 0
+logp(chief|is the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(ingredient) = 0
+logp(ingredient|the chief) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(in) = 41
+logp(in|chief ingredient) = -9.18
+Back off to unigram
+alpha([]) = 1894
+c(gallstones) = 0
+logp(gallstones|ingredient in) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|in gallstones) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|gallstones .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(defining) = 0
+logp(defining|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(sobriety) = 0
+logp(sobriety|<eos> defining) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(in) = 41
+logp(in|defining sobriety) = -9.18
+Back off to 2-gram
+alpha(in) = 41
+c(in the) = 10
+logp(the|sobriety in) = -4.29
+Back off to unigram
+alpha([]) = 1987
+c(limited) = 0
+logp(limited|in the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(sense) = 1
+logp(sense|the limited) = -14.5
+Back off to unigram
+alpha([]) = 2090
+c(of) = 71
+logp(of|limited sense) = -8.35
+Back off to unigram
+alpha([]) = 1910
+c(being) = 1
+logp(being|sense of) = -14.4
+Back off to unigram
+alpha([]) = 2136
+c(free) = 0
+logp(free|of being) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(from) = 11
+logp(from|being free) = -11.1
+Back off to 2-gram
+alpha(from) = 11
+c(from the) = 3
+logp(the|free from) = -4.13
+Back off to unigram
+alpha([]) = 1987
+c(clinical) = 0
+logp(clinical|from the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(symptoms) = 0
+logp(symptoms|the clinical) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|clinical symptoms) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of the) = 18
+logp(the|symptoms of) = -4.23
+Back off to unigram
+alpha([]) = 1987
+c(effects) = 0
+logp(effects|of the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|the effects) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(alcohol) = 0
+logp(alcohol|effects of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(ingested) = 0
+logp(ingested|of alcohol) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|alcohol ingested) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(not) = 8
+logp(not|ingested and) = -11.3
+Back off to unigram
+alpha([]) = 2100
+c(yet) = 0
+logp(yet|and not) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(eliminated) = 1
+logp(eliminated|not yet) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(from) = 11
+logp(from|yet eliminated) = -11.1
+Back off to 2-gram
+alpha(from) = 11
+c(from the) = 3
+logp(the|eliminated from) = -4.13
+Back off to unigram
+alpha([]) = 1987
+c(system) = 1
+logp(system|from the) = -14.4
+Back off to unigram
+alpha([]) = 2135
+c(,) = 99
+logp(,|the system) = -7.9
+Back off to unigram
+alpha([]) = 1595
+c(you) = 9
+logp(you|system ,) = -10.9
+Back off to 2-gram
+alpha(you) = 9
+c(you are) = 2
+logp(are|, you) = -4.42
+Back off to unigram
+alpha([]) = 1992
+c(sober) = 0
+logp(sober|you are) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|are sober) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|sober .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> the) = 8
+logp(the|<eos> <eos>) = -4.16
+Back off to unigram
+alpha([]) = 1987
+c(property) = 0
+logp(property|<eos> the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(sales) = 1
+logp(sales|the property) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(assistance) = 0
+logp(assistance|property sales) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(program) = 1
+logp(program|sales assistance) = -14.5
+Back off to unigram
+alpha([]) = 2129
+c(is) = 12
+logp(is|assistance program) = -10.9
+Back off to unigram
+alpha([]) = 1847
+c(designed) = 0
+logp(designed|program is) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|is designed) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(assist) = 0
+logp(assist|designed to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(small) = 0
+logp(small|to assist) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(business) = 0
+logp(business|assist small) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(concerns) = 0
+logp(concerns|small business) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(that) = 21
+logp(that|business concerns) = -10.1
+Back off to unigram
+alpha([]) = 1759
+c(may) = 2
+logp(may|concerns that) = -13.3
+Back off to unigram
+alpha([]) = 2120
+c(wish) = 1
+logp(wish|that may) = -14.5
+Back off to 2-gram
+alpha(wish) = 1
+c(wish to) = 1
+logp(to|may wish) = -2.25
+Back off to unigram
+alpha([]) = 1889
+c(buy) = 1
+logp(buy|wish to) = -14.4
+Back off to unigram
+alpha([]) = 2054
+c(property) = 0
+logp(property|to buy) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(offered) = 0
+logp(offered|buy property) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(for) = 14
+logp(for|property offered) = -10.7
+Back off to unigram
+alpha([]) = 1824
+c(sale) = 0
+logp(sale|offered for) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(by) = 12
+logp(by|for sale) = -11.0
+Back off to 2-gram
+alpha(by) = 12
+c(by the) = 4
+logp(the|sale by) = -3.84
+Back off to unigram
+alpha([]) = 1987
+c(federal) = 0
+logp(federal|by the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(government) = 0
+logp(government|the federal) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|federal government) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|government .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> if) = 4
+logp(if|<eos> <eos>) = -5.16
+Back off to 3-gram
+alpha(<eos> if) = 4
+c(<eos> if the) = 1
+logp(the|<eos> if) = -2.51
+Back off to unigram
+alpha([]) = 1987
+c(hessian) = 0
+logp(hessian|if the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(troops) = 0
+logp(troops|the hessian) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(sent) = 0
+logp(sent|hessian troops) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(here) = 0
+logp(here|troops sent) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(willy-nilly) = 0
+logp(willy-nilly|sent here) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(by) = 12
+logp(by|here willy-nilly) = -11.0
+Back off to 2-gram
+alpha(by) = 12
+c(by the) = 4
+logp(the|willy-nilly by) = -3.84
+Back off to unigram
+alpha([]) = 1987
+c(hessian) = 0
+logp(hessian|by the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(government) = 0
+logp(government|the hessian) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|hessian government) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(fight) = 0
+logp(fight|government to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(for) = 14
+logp(for|to fight) = -10.7
+Back off to unigram
+alpha([]) = 1824
+c(england) = 0
+logp(england|fight for) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(in) = 41
+logp(in|for england) = -9.18
+Back off to 2-gram
+alpha(in) = 41
+c(in the) = 10
+logp(the|england in) = -4.29
+Back off to unigram
+alpha([]) = 1987
+c(1770's) = 0
+logp(1770's|in the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(were) = 6
+logp(were|the 1770's) = -12.0
+Back off to unigram
+alpha([]) = 2003
+c(mercenaries) = 0
+logp(mercenaries|1770's were) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|were mercenaries) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(what) = 4
+logp(what|mercenaries ,) = -12.1
+Back off to unigram
+alpha([]) = 1977
+c(shall) = 1
+logp(shall|, what) = -14.4
+Back off to unigram
+alpha([]) = 2136
+c(we) = 3
+logp(we|what shall) = -12.9
+Back off to unigram
+alpha([]) = 2126
+c(call) = 0
+logp(call|shall we) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(the) = 122
+logp(the|we call) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(un) = 0
+logp(un|call the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(troops) = 0
+logp(troops|the un) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(sent) = 0
+logp(sent|un troops) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|troops sent) = -9.33
+Back off to 2-gram
+alpha(to) = 37
+c(to the) = 6
+logp(the|sent to) = -4.88
+Back off to unigram
+alpha([]) = 1987
+c(congo) = 0
+logp(congo|to the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(willy-nilly) = 0
+logp(willy-nilly|the congo) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(by) = 12
+logp(by|congo willy-nilly) = -11.0
+Back off to unigram
+alpha([]) = 1954
+c(their) = 7
+logp(their|willy-nilly by) = -11.6
+Back off to unigram
+alpha([]) = 2126
+c(governments) = 0
+logp(governments|by their) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|their governments) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(fight) = 0
+logp(fight|governments to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(for) = 14
+logp(for|to fight) = -10.7
+Back off to 2-gram
+alpha(for) = 14
+c(for the) = 1
+logp(the|fight for) = -6.06
+Back off to unigram
+alpha([]) = 1987
+c(united) = 0
+logp(united|for the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(nations) = 0
+logp(nations|the united) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(?) = 8
+logp(?|united nations) = -11.5
+Back off to 2-gram
+alpha(?) = 8
+c(? ?) = 4
+logp(?|nations ?) = -3.25
+Back off to 3-gram
+alpha(? ?) = 4
+c(? ? <eos>) = 4
+logp(<eos>|? ?) = -0.515
+Back off to 3-gram
+alpha(? <eos>) = 4
+c(? <eos> <eos>) = 4
+logp(<eos>|? <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> she) = 1
+logp(she|<eos> <eos>) = -7.16
+Back off to 2-gram
+alpha(she) = 1
+c(she said) = 1
+logp(said|<eos> she) = -2.25
+Back off to unigram
+alpha([]) = 1934
+c(to) = 37
+logp(to|she said) = -9.18
+Back off to 2-gram
+alpha(to) = 37
+c(to the) = 6
+logp(the|said to) = -4.88
+Back off to unigram
+alpha([]) = 1987
+c(saleslady) = 0
+logp(saleslady|to the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|the saleslady) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, ``) = 3
+logp(``|saleslady ,) = -7.3
+Back off to unigram
+alpha([]) = 2024
+c(i) = 3
+logp(i|, ``) = -12.9
+Back off to unigram
+alpha([]) = 2123
+c(want) = 0
+logp(want|`` i) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(a) = 47
+logp(a|i want) = -8.98
+Back off to unigram
+alpha([]) = 2075
+c(dress) = 0
+logp(dress|want a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|a dress) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(put) = 2
+logp(put|dress to) = -13.4
+Back off to 2-gram
+alpha(put) = 2
+c(put on) = 1
+logp(on|to put) = -3.25
+Back off to unigram
+alpha([]) = 1951
+c(around) = 2
+logp(around|put on) = -13.4
+Back off to unigram
+alpha([]) = 2124
+c(the) = 122
+logp(the|on around) = -7.6
+Back off to 2-gram
+alpha(the) = 122
+c(the house) = 1
+logp(house|around the) = -9.18
+Back off to unigram
+alpha([]) = 2038
+c('') = 12
+logp(''|the house) = -10.9
+Back off to 2-gram
+alpha('') = 12
+c('' .) = 5
+logp(.|house '') = -3.51
+Back off to 3-gram
+alpha('' .) = 5
+c('' . <eos>) = 5
+logp(<eos>|'' .) = -0.515
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> at) = 1
+logp(at|<eos> <eos>) = -7.16
+Back off to 3-gram
+alpha(<eos> at) = 1
+c(<eos> at the) = 1
+logp(the|<eos> at) = -0.515
+Back off to unigram
+alpha([]) = 1987
+c(door) = 0
+logp(door|at the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|the door) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(dave) = 0
+logp(dave|door ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(paused) = 0
+logp(paused|, dave) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|dave paused) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(feel) = 0
+logp(feel|paused to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(for) = 14
+logp(for|to feel) = -10.7
+Back off to 2-gram
+alpha(for) = 14
+c(for the) = 1
+logp(the|feel for) = -6.06
+Back off to unigram
+alpha([]) = 1987
+c(latch) = 0
+logp(latch|for the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|the latch) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|latch .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(more) = 2
+logp(more|<eos> <eos>) = -13.0
+Back off to unigram
+alpha([]) = 2065
+c(importantly) = 0
+logp(importantly|<eos> more) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|more importantly) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, he) = 2
+logp(he|importantly ,) = -7.88
+Back off to unigram
+alpha([]) = 2080
+c(also) = 0
+logp(also|, he) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(happens) = 0
+logp(happens|he also) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|also happens) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(be) = 16
+logp(be|happens to) = -10.4
+Back off to unigram
+alpha([]) = 2068
+c(the) = 122
+logp(the|to be) = -7.56
+Back off to unigram
+alpha([]) = 1987
+c(brother-in-law) = 0
+logp(brother-in-law|be the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|the brother-in-law) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(sam) = 0
+logp(sam|brother-in-law of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(rayburn) = 0
+logp(rayburn|of sam) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|sam rayburn) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(speaker) = 0
+logp(speaker|rayburn ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|, speaker) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of the) = 18
+logp(the|speaker of) = -4.23
+Back off to 2-gram
+alpha(the) = 102
+c(the house) = 1
+logp(house|of the) = -8.92
+Back off to unigram
+alpha([]) = 2038
+c(.) = 83
+logp(.|the house) = -8.09
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|house .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> if) = 4
+logp(if|<eos> <eos>) = -5.16
+Back off to unigram
+alpha([]) = 1961
+c(,) = 99
+logp(,|<eos> if) = -7.78
+Back off to 2-gram
+alpha(,) = 99
+c(, as) = 2
+logp(as|if ,) = -7.88
+Back off to 2-gram
+alpha(as) = 14
+c(as a) = 2
+logp(a|, as) = -5.06
+Back off to unigram
+alpha([]) = 2075
+c(home) = 0
+logp(home|as a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(movie) = 1
+logp(movie|a home) = -14.5
+Back off to unigram
+alpha([]) = 2133
+c(maker) = 0
+logp(maker|home movie) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|movie maker) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(you) = 9
+logp(you|maker ,) = -10.9
+Back off to unigram
+alpha([]) = 1955
+c(shoot) = 0
+logp(shoot|, you) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(the) = 122
+logp(the|you shoot) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(inevitable) = 0
+logp(inevitable|shoot the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(footage) = 0
+logp(footage|the inevitable) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|inevitable footage) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of your) = 2
+logp(your|footage of) = -7.4
+Back off to unigram
+alpha([]) = 2128
+c(child) = 0
+logp(child|of your) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(taking) = 0
+logp(taking|your child) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(its) = 4
+logp(its|child taking) = -12.5
+Back off to unigram
+alpha([]) = 2133
+c(first) = 2
+logp(first|taking its) = -13.5
+Back off to unigram
+alpha([]) = 2134
+c(steps) = 3
+logp(steps|its first) = -12.9
+Back off to unigram
+alpha([]) = 2133
+c(,) = 99
+logp(,|first steps) = -7.9
+Back off to unigram
+alpha([]) = 1595
+c(you) = 9
+logp(you|steps ,) = -10.9
+Back off to unigram
+alpha([]) = 1955
+c(have) = 7
+logp(have|, you) = -11.6
+Back off to unigram
+alpha([]) = 2007
+c(merely) = 0
+logp(merely|you have) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(recorded) = 0
+logp(recorded|have merely) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(an) = 14
+logp(an|merely recorded) = -10.7
+Back off to unigram
+alpha([]) = 2119
+c(historical) = 0
+logp(historical|recorded an) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(event) = 0
+logp(event|an historical) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|historical event) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|event .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> he) = 4
+logp(he|<eos> <eos>) = -5.16
+Back off to unigram
+alpha([]) = 2080
+c(did) = 3
+logp(did|<eos> he) = -12.9
+Back off to 2-gram
+alpha(did) = 3
+c(did not) = 2
+logp(not|he did) = -2.84
+Back off to unigram
+alpha([]) = 2100
+c(speak) = 0
+logp(speak|did not) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|not speak) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|speak .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> after) = 2
+logp(after|<eos> <eos>) = -6.16
+Back off to unigram
+alpha([]) = 2072
+c(playing) = 0
+logp(playing|<eos> after) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(a) = 47
+logp(a|after playing) = -8.98
+Back off to unigram
+alpha([]) = 2075
+c(splendid) = 0
+logp(splendid|playing a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(first) = 2
+logp(first|a splendid) = -13.5
+Back off to unigram
+alpha([]) = 2134
+c(nine) = 0
+logp(nine|splendid first) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(holes) = 0
+logp(holes|first nine) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(in) = 41
+logp(in|nine holes) = -9.18
+Back off to unigram
+alpha([]) = 1894
+c(34) = 0
+logp(34|holes in) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(--) = 7
+logp(--|in 34) = -11.7
+Back off to 2-gram
+alpha(--) = 7
+c(-- two) = 1
+logp(two|34 --) = -5.06
+Back off to unigram
+alpha([]) = 2127
+c(strokes) = 0
+logp(strokes|-- two) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(under) = 0
+logp(under|two strokes) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(par) = 0
+logp(par|strokes under) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(--) = 7
+logp(--|under par) = -11.7
+Back off to unigram
+alpha([]) = 1947
+c(on) = 11
+logp(on|par --) = -10.9
+Back off to unigram
+alpha([]) = 1951
+c(this) = 16
+logp(this|-- on) = -10.4
+Back off to unigram
+alpha([]) = 2030
+c(fifth) = 0
+logp(fifth|on this) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|this fifth) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(final) = 2
+logp(final|fifth and) = -13.3
+Back off to unigram
+alpha([]) = 2135
+c(day) = 3
+logp(day|and final) = -12.9
+Back off to unigram
+alpha([]) = 1955
+c(of) = 71
+logp(of|final day) = -8.26
+Back off to 2-gram
+alpha(of) = 71
+c(of the) = 18
+logp(the|day of) = -4.23
+Back off to unigram
+alpha([]) = 1987
+c(tournament) = 0
+logp(tournament|of the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(() = 3
+logp((|the tournament) = -13.0
+Back off to unigram
+alpha([]) = 2013
+c(sunday's) = 0
+logp(sunday's|tournament () = -inf
+Back off to unigram
+alpha([]) = 2137
+c(fourth) = 1
+logp(fourth|( sunday's) = -14.5
+Back off to unigram
+alpha([]) = 2038
+c(round) = 0
+logp(round|sunday's fourth) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(had) = 4
+logp(had|fourth round) = -12.5
+Back off to 2-gram
+alpha(had) = 4
+c(had been) = 1
+logp(been|round had) = -4.25
+Back off to unigram
+alpha([]) = 2035
+c(washed) = 0
+logp(washed|had been) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(out) = 3
+logp(out|been washed) = -13.0
+Back off to unigram
+alpha([]) = 1932
+c(by) = 12
+logp(by|washed out) = -10.8
+Back off to 2-gram
+alpha(by) = 12
+c(by a) = 1
+logp(a|out by) = -5.84
+Back off to unigram
+alpha([]) = 2075
+c(violent) = 0
+logp(violent|by a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(rainstorm) = 0
+logp(rainstorm|a violent) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(when) = 5
+logp(when|violent rainstorm) = -12.2
+Back off to unigram
+alpha([]) = 1991
+c(it) = 16
+logp(it|rainstorm when) = -10.4
+Back off to 2-gram
+alpha(it) = 16
+c(it was) = 1
+logp(was|when it) = -6.25
+Back off to unigram
+alpha([]) = 2065
+c(only) = 1
+logp(only|it was) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(half) = 0
+logp(half|was only) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(completed) = 0
+logp(completed|only half) = -inf
+Back off to unigram
+alpha([]) = 2137
+c()) = 3
+logp()|half completed) = -13.0
+Back off to unigram
+alpha([]) = 1955
+c(,) = 99
+logp(,|completed )) = -7.78
+Back off to unigram
+alpha([]) = 1595
+c(player's) = 0
+logp(player's|) ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(game) = 0
+logp(game|, player's) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(rapidly) = 0
+logp(rapidly|player's game) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(fell) = 0
+logp(fell|game rapidly) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|rapidly fell) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(pieces) = 0
+logp(pieces|fell to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|to pieces) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|pieces .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(mr.) = 0
+logp(mr.|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(nehru) = 0
+logp(nehru|<eos> mr.) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(is) = 12
+logp(is|mr. nehru) = -11.0
+Back off to unigram
+alpha([]) = 1847
+c(subjected) = 0
+logp(subjected|nehru is) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|is subjected) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(stern) = 1
+logp(stern|subjected to) = -14.4
+Back off to unigram
+alpha([]) = 2136
+c(lectures) = 0
+logp(lectures|to stern) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(on) = 11
+logp(on|stern lectures) = -11.1
+Back off to unigram
+alpha([]) = 1951
+c(neutralism) = 0
+logp(neutralism|lectures on) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(by) = 12
+logp(by|on neutralism) = -11.0
+Back off to unigram
+alpha([]) = 1954
+c(our) = 3
+logp(our|neutralism by) = -12.8
+Back off to unigram
+alpha([]) = 2134
+c(department) = 1
+logp(department|by our) = -14.5
+Back off to unigram
+alpha([]) = 2135
+c(of) = 71
+logp(of|our department) = -8.38
+Back off to unigram
+alpha([]) = 1910
+c(state) = 1
+logp(state|department of) = -14.4
+Back off to unigram
+alpha([]) = 2066
+c(,) = 99
+logp(,|of state) = -7.86
+Back off to 2-gram
+alpha(,) = 99
+c(, and) = 5
+logp(and|state ,) = -6.56
+Back off to unigram
+alpha([]) = 1762
+c(an) = 14
+logp(an|, and) = -10.4
+Back off to 2-gram
+alpha(an) = 14
+c(an american) = 1
+logp(american|and an) = -6.06
+Back off to unigram
+alpha([]) = 2132
+c(president) = 0
+logp(president|an american) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(observes) = 0
+logp(observes|american president) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(sourly) = 0
+logp(sourly|president observes) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(that) = 21
+logp(that|observes sourly) = -10.1
+Back off to unigram
+alpha([]) = 1759
+c(sweden) = 0
+logp(sweden|sourly that) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(would) = 6
+logp(would|that sweden) = -12.0
+Back off to 2-gram
+alpha(would) = 6
+c(would be) = 1
+logp(be|sweden would) = -4.84
+Back off to unigram
+alpha([]) = 2068
+c(a) = 47
+logp(a|would be) = -8.93
+Back off to unigram
+alpha([]) = 2075
+c(little) = 0
+logp(little|be a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(less) = 1
+logp(less|a little) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(neurotic) = 0
+logp(neurotic|little less) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(if) = 9
+logp(if|less neurotic) = -11.4
+Back off to 2-gram
+alpha(if) = 9
+c(if it) = 1
+logp(it|neurotic if) = -5.42
+Back off to unigram
+alpha([]) = 1886
+c(were) = 6
+logp(were|if it) = -11.8
+Back off to unigram
+alpha([]) = 2003
+c(a) = 47
+logp(a|it were) = -8.89
+Back off to unigram
+alpha([]) = 2075
+c(little) = 0
+logp(little|were a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(more) = 2
+logp(more|a little) = -13.5
+Back off to unigram
+alpha([]) = 2065
+c(capitalistic) = 0
+logp(capitalistic|little more) = -inf
+Back off to unigram
+alpha([]) = 2137
+c('') = 12
+logp(''|more capitalistic) = -11.0
+Back off to 2-gram
+alpha('') = 12
+c('' .) = 5
+logp(.|capitalistic '') = -3.51
+Back off to 3-gram
+alpha('' .) = 5
+c('' . <eos>) = 5
+logp(<eos>|'' .) = -0.515
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> and) = 3
+logp(and|<eos> <eos>) = -5.57
+Back off to unigram
+alpha([]) = 1762
+c(also) = 0
+logp(also|<eos> and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|and also) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(change) = 2
+logp(change|also to) = -13.4
+Back off to unigram
+alpha([]) = 2121
+c(telephones) = 0
+logp(telephones|to change) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|change telephones) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|telephones .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(fifty) = 0
+logp(fifty|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(a) = 47
+logp(a|<eos> fifty) = -8.98
+Back off to unigram
+alpha([]) = 2075
+c(throw) = 0
+logp(throw|fifty a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|a throw) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, that) = 1
+logp(that|throw ,) = -8.88
+Back off to 3-gram
+alpha(, that) = 1
+c(, that the) = 1
+logp(the|, that) = -0.515
+Back off to unigram
+alpha([]) = 1987
+c(deal) = 0
+logp(deal|that the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(?) = 8
+logp(?|the deal) = -11.5
+Back off to 2-gram
+alpha(?) = 8
+c(? ?) = 4
+logp(?|deal ?) = -3.25
+Back off to 3-gram
+alpha(? ?) = 4
+c(? ? <eos>) = 4
+logp(<eos>|? ?) = -0.515
+Back off to 3-gram
+alpha(? <eos>) = 4
+c(? <eos> <eos>) = 4
+logp(<eos>|? <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(named) = 0
+logp(named|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(by) = 12
+logp(by|<eos> named) = -11.0
+Back off to unigram
+alpha([]) = 1954
+c(mayor) = 0
+logp(mayor|named by) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(wagner) = 0
+logp(wagner|by mayor) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(three) = 1
+logp(three|mayor wagner) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(years) = 0
+logp(years|wagner three) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(ago) = 1
+logp(ago|three years) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(to) = 37
+logp(to|years ago) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(head) = 0
+logp(head|ago to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(a) = 47
+logp(a|to head) = -8.98
+Back off to unigram
+alpha([]) = 2075
+c(committee) = 0
+logp(committee|head a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(that) = 21
+logp(that|a committee) = -10.1
+Back off to unigram
+alpha([]) = 1759
+c(included) = 1
+logp(included|committee that) = -14.3
+Back off to unigram
+alpha([]) = 2132
+c(james) = 0
+logp(james|that included) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(a.) = 1
+logp(a.|included james) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(farley) = 0
+logp(farley|james a.) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|a. farley) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(bernard) = 0
+logp(bernard|farley ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(gimbel) = 0
+logp(gimbel|, bernard) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|bernard gimbel) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(clint) = 0
+logp(clint|gimbel and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(blume) = 0
+logp(blume|and clint) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|clint blume) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(shea) = 0
+logp(shea|blume ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(worked) = 0
+logp(worked|, shea) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(relentlessly) = 0
+logp(relentlessly|shea worked) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|worked relentlessly) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|relentlessly .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(taking) = 0
+logp(taking|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(first) = 2
+logp(first|<eos> taking) = -13.5
+Back off to unigram
+alpha([]) = 2134
+c(things) = 0
+logp(things|taking first) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(first) = 2
+logp(first|first things) = -13.5
+Back off to unigram
+alpha([]) = 2134
+c(,) = 99
+logp(,|things first) = -7.9
+Back off to unigram
+alpha([]) = 1595
+c(let's) = 0
+logp(let's|first ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(understand) = 0
+logp(understand|, let's) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(the) = 122
+logp(the|let's understand) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(sport) = 0
+logp(sport|understand the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(called) = 1
+logp(called|the sport) = -14.5
+Back off to unigram
+alpha([]) = 2122
+c(gymnastics) = 0
+logp(gymnastics|sport called) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|called gymnastics) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|gymnastics .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(about) = 2
+logp(about|<eos> <eos>) = -13.0
+Back off to unigram
+alpha([]) = 2015
+c(500) = 0
+logp(500|<eos> about) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(employes) = 0
+logp(employes|about 500) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|500 employes) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of the) = 18
+logp(the|employes of) = -4.23
+Back off to unigram
+alpha([]) = 1987
+c(firm) = 0
+logp(firm|of the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(will) = 6
+logp(will|the firm) = -12.0
+Back off to 2-gram
+alpha(will) = 6
+c(will be) = 2
+logp(be|firm will) = -3.84
+Back off to unigram
+alpha([]) = 2068
+c(on) = 11
+logp(on|will be) = -11.0
+Back off to unigram
+alpha([]) = 1951
+c(hand) = 0
+logp(hand|be on) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|on hand) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(witness) = 0
+logp(witness|hand to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(bestowal) = 1
+logp(bestowal|to witness) = -14.5
+Back off to 2-gram
+alpha(bestowal) = 1
+c(bestowal of) = 1
+logp(of|witness bestowal) = -2.25
+Back off to 2-gram
+alpha(of) = 70
+c(of the) = 18
+logp(the|bestowal of) = -4.21
+Back off to unigram
+alpha([]) = 1987
+c(honor) = 0
+logp(honor|of the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(upon) = 0
+logp(upon|the honor) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(mr.) = 0
+logp(mr.|honor upon) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(sorrentino) = 0
+logp(sorrentino|upon mr.) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|mr. sorrentino) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|sorrentino .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(before) = 2
+logp(before|<eos> <eos>) = -13.0
+Back off to unigram
+alpha([]) = 2128
+c(the) = 122
+logp(the|<eos> before) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(king) = 0
+logp(king|before the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(?) = 8
+logp(?|the king) = -11.5
+Back off to 2-gram
+alpha(?) = 8
+c(? ?) = 4
+logp(?|king ?) = -3.25
+Back off to 3-gram
+alpha(? ?) = 4
+c(? ? <eos>) = 4
+logp(<eos>|? ?) = -0.515
+Back off to 3-gram
+alpha(? <eos>) = 4
+c(? <eos> <eos>) = 4
+logp(<eos>|? <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> a) = 1
+logp(a|<eos> <eos>) = -7.16
+Back off to unigram
+alpha([]) = 2075
+c(lamp) = 0
+logp(lamp|<eos> a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(burned) = 0
+logp(burned|a lamp) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(inside) = 0
+logp(inside|lamp burned) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|burned inside) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, but) = 2
+logp(but|inside ,) = -7.88
+Back off to unigram
+alpha([]) = 1972
+c(brannon) = 0
+logp(brannon|, but) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|but brannon) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(peering) = 0
+logp(peering|brannon ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(through) = 1
+logp(through|, peering) = -14.5
+Back off to unigram
+alpha([]) = 2133
+c(the) = 122
+logp(the|peering through) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(window) = 0
+logp(window|through the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|the window) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(saw) = 1
+logp(saw|window ,) = -14.1
+Back off to unigram
+alpha([]) = 2123
+c(that) = 21
+logp(that|, saw) = -10.1
+Back off to 2-gram
+alpha(that) = 21
+c(that the) = 3
+logp(the|saw that) = -5.06
+Back off to unigram
+alpha([]) = 1987
+c(office) = 0
+logp(office|that the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(was) = 12
+logp(was|the office) = -11.0
+Back off to unigram
+alpha([]) = 2065
+c(empty) = 0
+logp(empty|office was) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|was empty) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|empty .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> the) = 8
+logp(the|<eos> <eos>) = -4.16
+Back off to unigram
+alpha([]) = 1987
+c(path) = 0
+logp(path|<eos> the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|the path) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(leadership) = 0
+logp(leadership|path to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(is) = 12
+logp(is|to leadership) = -11.0
+Back off to unigram
+alpha([]) = 1847
+c(made) = 1
+logp(made|leadership is) = -14.3
+Back off to unigram
+alpha([]) = 2100
+c(clear) = 0
+logp(clear|is made) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|made clear) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|clear .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> --) = 1
+logp(--|<eos> <eos>) = -7.16
+Back off to unigram
+alpha([]) = 1947
+c(the) = 122
+logp(the|<eos> --) = -7.47
+Back off to unigram
+alpha([]) = 1987
+c(deterrent) = 0
+logp(deterrent|-- the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(power) = 1
+logp(power|the deterrent) = -14.5
+Back off to unigram
+alpha([]) = 2096
+c(of) = 71
+logp(of|deterrent power) = -8.36
+Back off to 2-gram
+alpha(of) = 71
+c(of our) = 1
+logp(our|power of) = -8.4
+Back off to unigram
+alpha([]) = 2134
+c(armed) = 0
+logp(armed|of our) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(forces) = 1
+logp(forces|our armed) = -14.5
+Back off to unigram
+alpha([]) = 2131
+c(comes) = 0
+logp(comes|armed forces) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(from) = 11
+logp(from|forces comes) = -11.1
+Back off to unigram
+alpha([]) = 2004
+c(both) = 0
+logp(both|comes from) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(their) = 7
+logp(their|from both) = -11.7
+Back off to unigram
+alpha([]) = 2126
+c(nuclear) = 1
+logp(nuclear|both their) = -14.5
+Back off to unigram
+alpha([]) = 2135
+c(retaliatory) = 0
+logp(retaliatory|their nuclear) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(capability) = 0
+logp(capability|nuclear retaliatory) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|retaliatory capability) = -9.18
+Back off to 2-gram
+alpha(and) = 41
+c(and their) = 1
+logp(their|capability and) = -7.61
+Back off to unigram
+alpha([]) = 2126
+c(capability) = 0
+logp(capability|and their) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|their capability) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(conduct) = 0
+logp(conduct|capability to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(other) = 2
+logp(other|to conduct) = -13.5
+Back off to unigram
+alpha([]) = 2133
+c(essential) = 0
+logp(essential|conduct other) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(operations) = 0
+logp(operations|other essential) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(in) = 41
+logp(in|essential operations) = -9.18
+Back off to unigram
+alpha([]) = 1894
+c(any) = 2
+logp(any|operations in) = -13.4
+Back off to unigram
+alpha([]) = 2125
+c(form) = 0
+logp(form|in any) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|any form) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(war) = 2
+logp(war|form of) = -13.4
+Back off to 2-gram
+alpha(war) = 2
+c(war .) = 1
+logp(.|of war) = -3.25
+Back off to 3-gram
+alpha(war .) = 1
+c(war . <eos>) = 1
+logp(<eos>|war .) = -0.515
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> i) = 1
+logp(i|<eos> <eos>) = -7.16
+Back off to unigram
+alpha([]) = 2123
+c(pointed) = 0
+logp(pointed|<eos> i) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|i pointed) = -9.33
+Back off to 2-gram
+alpha(to) = 37
+c(to the) = 6
+logp(the|pointed to) = -4.88
+Back off to unigram
+alpha([]) = 1987
+c(splintered) = 0
+logp(splintered|to the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|the splintered) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(upright) = 0
+logp(upright|splintered ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(stake) = 0
+logp(stake|, upright) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|upright stake) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|stake .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c($85) = 0
+logp($85|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(by) = 12
+logp(by|<eos> $85) = -11.0
+Back off to unigram
+alpha([]) = 1954
+c(1986) = 0
+logp(1986|$85 by) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|by 1986) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, and) = 5
+logp(and|1986 ,) = -6.56
+Back off to unigram
+alpha([]) = 1762
+c($90) = 0
+logp($90|, and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(thereafter) = 0
+logp(thereafter|and $90) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|$90 thereafter) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|thereafter .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> for) = 1
+logp(for|<eos> <eos>) = -7.16
+Back off to 2-gram
+alpha(for) = 13
+c(for the) = 1
+logp(the|<eos> for) = -5.95
+Back off to unigram
+alpha([]) = 1987
+c(sound) = 1
+logp(sound|for the) = -14.4
+Back off to unigram
+alpha([]) = 2136
+c(was) = 12
+logp(was|the sound) = -10.9
+Back off to unigram
+alpha([]) = 2065
+c(inside) = 0
+logp(inside|sound was) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(the) = 122
+logp(the|was inside) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(room) = 0
+logp(room|inside the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|the room) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|room .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(great) = 1
+logp(great|<eos> <eos>) = -14.0
+Back off to unigram
+alpha([]) = 2136
+c(actors) = 0
+logp(actors|<eos> great) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|great actors) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(actresses) = 0
+logp(actresses|actors and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(--) = 7
+logp(--|and actresses) = -11.7
+Back off to unigram
+alpha([]) = 1947
+c(the) = 122
+logp(the|actresses --) = -7.47
+Back off to 2-gram
+alpha(the) = 122
+c(the most) = 3
+logp(most|-- the) = -7.6
+Back off to unigram
+alpha([]) = 2062
+c(notable) = 0
+logp(notable|the most) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(being) = 1
+logp(being|most notable) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(sarah) = 0
+logp(sarah|notable being) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(bernhardt) = 0
+logp(bernhardt|being sarah) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(--) = 7
+logp(--|sarah bernhardt) = -11.7
+Back off to unigram
+alpha([]) = 1947
+c(were) = 6
+logp(were|bernhardt --) = -11.8
+Back off to unigram
+alpha([]) = 2003
+c(hired) = 0
+logp(hired|-- were) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|were hired) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(repeat) = 0
+logp(repeat|hired to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(their) = 7
+logp(their|to repeat) = -11.7
+Back off to unigram
+alpha([]) = 2126
+c(stage) = 2
+logp(stage|repeat their) = -13.5
+Back off to unigram
+alpha([]) = 2026
+c(performances) = 0
+logp(performances|their stage) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(before) = 2
+logp(before|stage performances) = -13.5
+Back off to unigram
+alpha([]) = 2128
+c(the) = 122
+logp(the|performances before) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(camera) = 0
+logp(camera|before the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|the camera) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|camera .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(miss) = 0
+logp(miss|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(mary) = 0
+logp(mary|<eos> miss) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(ross) = 0
+logp(ross|miss mary) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|mary ross) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(baird) = 0
+logp(baird|ross of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(was) = 12
+logp(was|of baird) = -11.0
+Back off to unigram
+alpha([]) = 2065
+c(maid) = 0
+logp(maid|baird was) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|was maid) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(honor) = 0
+logp(honor|maid of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|of honor) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, and) = 5
+logp(and|honor ,) = -6.56
+Back off to unigram
+alpha([]) = 1762
+c(bridesmaids) = 0
+logp(bridesmaids|, and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(were) = 6
+logp(were|and bridesmaids) = -12.0
+Back off to unigram
+alpha([]) = 2003
+c(miss) = 0
+logp(miss|bridesmaids were) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(pat) = 0
+logp(pat|were miss) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(dawson) = 0
+logp(dawson|miss pat) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|pat dawson) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(austin) = 0
+logp(austin|dawson of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|of austin) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(mrs.) = 0
+logp(mrs.|austin ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(howard) = 0
+logp(howard|, mrs.) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(m.) = 0
+logp(m.|mrs. howard) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(dean) = 0
+logp(dean|howard m.) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|m. dean) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(hinsdale) = 0
+logp(hinsdale|dean of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|of hinsdale) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(ill.) = 0
+logp(ill.|hinsdale ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|, ill.) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, and) = 5
+logp(and|ill. ,) = -6.56
+Back off to unigram
+alpha([]) = 1762
+c(mrs.) = 0
+logp(mrs.|, and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(james) = 0
+logp(james|and mrs.) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(a.) = 1
+logp(a.|mrs. james) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(reeder) = 0
+logp(reeder|james a.) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|a. reeder) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(shreveport) = 0
+logp(shreveport|reeder of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|of shreveport) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(la.) = 0
+logp(la.|shreveport ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|, la.) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|la. .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> she) = 1
+logp(she|<eos> <eos>) = -7.16
+Back off to unigram
+alpha([]) = 2130
+c(jumped) = 0
+logp(jumped|<eos> she) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(as) = 17
+logp(as|she jumped) = -10.4
+Back off to 2-gram
+alpha(as) = 17
+c(as the) = 1
+logp(the|jumped as) = -6.34
+Back off to unigram
+alpha([]) = 1987
+c(little) = 0
+logp(little|as the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(man) = 1
+logp(man|the little) = -14.5
+Back off to unigram
+alpha([]) = 2130
+c(now) = 5
+logp(now|little man) = -12.2
+Back off to unigram
+alpha([]) = 2104
+c(appeared) = 0
+logp(appeared|man now) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(at) = 5
+logp(at|now appeared) = -12.2
+Back off to 2-gram
+alpha(at) = 5
+c(at the) = 2
+logp(the|appeared at) = -3.57
+Back off to unigram
+alpha([]) = 1987
+c(window) = 0
+logp(window|at the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|the window) = -9.18
+Back off to 2-gram
+alpha(and) = 41
+c(and ,) = 1
+logp(,|window and) = -7.61
+Back off to unigram
+alpha([]) = 1595
+c(reaching) = 0
+logp(reaching|and ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(through) = 1
+logp(through|, reaching) = -14.5
+Back off to unigram
+alpha([]) = 2133
+c(the) = 122
+logp(the|reaching through) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(opening) = 0
+logp(opening|through the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|the opening) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(offered) = 0
+logp(offered|opening ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(her) = 4
+logp(her|, offered) = -12.5
+Back off to unigram
+alpha([]) = 2133
+c(a) = 47
+logp(a|offered her) = -8.98
+Back off to unigram
+alpha([]) = 2075
+c(bottle) = 0
+logp(bottle|her a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|a bottle) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(coke) = 0
+logp(coke|bottle of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|of coke) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|coke .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(programs) = 1
+logp(programs|<eos> <eos>) = -14.0
+Back off to unigram
+alpha([]) = 2134
+c(usually) = 2
+logp(usually|<eos> programs) = -13.5
+Back off to unigram
+alpha([]) = 2127
+c(are) = 8
+logp(are|programs usually) = -11.5
+Back off to unigram
+alpha([]) = 1992
+c(expanded) = 0
+logp(expanded|usually are) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(only) = 1
+logp(only|are expanded) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(when) = 5
+logp(when|expanded only) = -12.2
+Back off to unigram
+alpha([]) = 1991
+c(outside) = 0
+logp(outside|only when) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(funds) = 0
+logp(funds|when outside) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(are) = 8
+logp(are|outside funds) = -11.5
+Back off to unigram
+alpha([]) = 1992
+c(available) = 0
+logp(available|funds are) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(or) = 13
+logp(or|are available) = -10.8
+Back off to unigram
+alpha([]) = 1932
+c(local) = 0
+logp(local|available or) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(business) = 0
+logp(business|or local) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(leaders) = 0
+logp(leaders|local business) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(demand) = 0
+logp(demand|business leaders) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(it) = 16
+logp(it|leaders demand) = -10.5
+Back off to unigram
+alpha([]) = 1886
+c(.) = 83
+logp(.|demand it) = -7.98
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|it .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> ``) = 10
+logp(``|<eos> <eos>) = -3.84
+Back off to unigram
+alpha([]) = 2024
+c(ah-ah) = 0
+logp(ah-ah|<eos> ``) = -inf
+Back off to unigram
+alpha([]) = 2137
+c('') = 12
+logp(''|`` ah-ah) = -11.0
+Back off to unigram
+alpha([]) = 1940
+c(!) = 6
+logp(!|ah-ah '') = -11.8
+Back off to 2-gram
+alpha(!) = 6
+c(! !) = 3
+logp(!|'' !) = -3.25
+Back off to 3-gram
+alpha(! !) = 3
+c(! ! <eos>) = 3
+logp(<eos>|! !) = -0.515
+Back off to 3-gram
+alpha(! <eos>) = 3
+c(! <eos> <eos>) = 3
+logp(<eos>|! <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> ``) = 10
+logp(``|<eos> <eos>) = -3.84
+Back off to unigram
+alpha([]) = 2024
+c(people) = 2
+logp(people|<eos> ``) = -13.5
+Back off to unigram
+alpha([]) = 1967
+c(and) = 41
+logp(and|`` people) = -9.06
+Back off to unigram
+alpha([]) = 1762
+c(soils) = 0
+logp(soils|people and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(respond) = 0
+logp(respond|and soils) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(slowly) = 0
+logp(slowly|soils respond) = -inf
+Back off to unigram
+alpha([]) = 2137
+c('') = 12
+logp(''|respond slowly) = -11.0
+Back off to 2-gram
+alpha('') = 12
+c('' ,) = 2
+logp(,|slowly '') = -4.84
+Back off to unigram
+alpha([]) = 1595
+c(says) = 0
+logp(says|'' ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(walter) = 0
+logp(walter|, says) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(clark) = 0
+logp(clark|says walter) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|walter clark) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, ``) = 3
+logp(``|clark ,) = -7.3
+Back off to 2-gram
+alpha(``) = 12
+c(`` but) = 1
+logp(but|, ``) = -5.84
+Back off to 2-gram
+alpha(but) = 7
+c(but the) = 1
+logp(the|`` but) = -5.06
+Back off to unigram
+alpha([]) = 1987
+c(time) = 2
+logp(time|but the) = -13.4
+Back off to unigram
+alpha([]) = 2031
+c(has) = 2
+logp(has|the time) = -13.5
+Back off to unigram
+alpha([]) = 2127
+c(now) = 5
+logp(now|time has) = -12.2
+Back off to unigram
+alpha([]) = 2104
+c(come) = 0
+logp(come|has now) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(when) = 5
+logp(when|now come) = -12.2
+Back off to 2-gram
+alpha(when) = 5
+c(when the) = 2
+logp(the|come when) = -3.57
+Back off to unigram
+alpha([]) = 1987
+c(gardens) = 0
+logp(gardens|when the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(produce) = 0
+logp(produce|the gardens) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(delicious) = 0
+logp(delicious|gardens produce) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(long-keeping) = 0
+logp(long-keeping|produce delicious) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(vegetables) = 0
+logp(vegetables|delicious long-keeping) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(due) = 0
+logp(due|long-keeping vegetables) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|vegetables due) = -9.33
+Back off to 2-gram
+alpha(to) = 37
+c(to this) = 1
+logp(this|due to) = -7.46
+Back off to unigram
+alpha([]) = 2030
+c(enrichment) = 0
+logp(enrichment|to this) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(program) = 1
+logp(program|this enrichment) = -14.5
+Back off to unigram
+alpha([]) = 2129
+c(.) = 83
+logp(.|enrichment program) = -8.15
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|program .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> it) = 4
+logp(it|<eos> <eos>) = -5.16
+Back off to 2-gram
+alpha(it) = 12
+c(it was) = 1
+logp(was|<eos> it) = -5.84
+Back off to unigram
+alpha([]) = 2065
+c(well) = 6
+logp(well|it was) = -11.9
+Back off to unigram
+alpha([]) = 1990
+c(past) = 0
+logp(past|was well) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(midnight) = 0
+logp(midnight|well past) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|past midnight) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|midnight .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> the) = 8
+logp(the|<eos> <eos>) = -4.16
+Back off to unigram
+alpha([]) = 1987
+c(degree) = 0
+logp(degree|<eos> the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|the degree) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(circumstance) = 0
+logp(circumstance|degree of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|of circumstance) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, the) = 9
+logp(the|circumstance ,) = -5.71
+Back off to unigram
+alpha([]) = 1987
+c(ratio) = 0
+logp(ratio|, the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|the ratio) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(memory) = 0
+logp(memory|ratio of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|of memory) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(forgetfulness) = 0
+logp(forgetfulness|memory to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|to forgetfulness) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(determines) = 0
+logp(determines|forgetfulness ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(whether) = 0
+logp(whether|, determines) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(a) = 47
+logp(a|determines whether) = -8.98
+Back off to unigram
+alpha([]) = 2075
+c(dream) = 0
+logp(dream|whether a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(will) = 6
+logp(will|a dream) = -12.0
+Back off to 2-gram
+alpha(will) = 6
+c(will be) = 2
+logp(be|dream will) = -3.84
+Back off to unigram
+alpha([]) = 2068
+c(a) = 47
+logp(a|will be) = -8.93
+Back off to unigram
+alpha([]) = 2075
+c(recognized) = 0
+logp(recognized|be a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|a recognized) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(fulfilled) = 0
+logp(fulfilled|recognized ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(prevision) = 0
+logp(prevision|, fulfilled) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|fulfilled prevision) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, or) = 3
+logp(or|prevision ,) = -7.3
+Back off to 2-gram
+alpha(or) = 10
+c(or the) = 1
+logp(the|, or) = -5.57
+Back off to unigram
+alpha([]) = 1987
+c(vaguely) = 0
+logp(vaguely|or the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|the vaguely) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(effective) = 0
+logp(effective|vaguely ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(source) = 0
+logp(source|, effective) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|effective source) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of the) = 18
+logp(the|source of) = -4.23
+Back off to unigram
+alpha([]) = 1987
+c(weird) = 0
+logp(weird|of the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(deja) = 0
+logp(deja|the weird) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(vue) = 0
+logp(vue|weird deja) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(feeling) = 0
+logp(feeling|deja vue) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|vue feeling) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|feeling .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> it) = 4
+logp(it|<eos> <eos>) = -5.16
+Back off to 3-gram
+alpha(<eos> it) = 4
+c(<eos> it is) = 2
+logp(is|<eos> it) = -1.51
+Back off to 2-gram
+alpha(is) = 10
+c(is a) = 2
+logp(a|it is) = -4.57
+Back off to unigram
+alpha([]) = 2075
+c(mistake) = 1
+logp(mistake|is a) = -14.5
+Back off to unigram
+alpha([]) = 2054
+c(,) = 99
+logp(,|a mistake) = -7.85
+Back off to unigram
+alpha([]) = 1595
+c(however) = 1
+logp(however|mistake ,) = -14.1
+Back off to 2-gram
+alpha(however) = 1
+c(however ,) = 1
+logp(,|, however) = -2.25
+Back off to 2-gram
+alpha(,) = 90
+c(, to) = 2
+logp(to|however ,) = -7.74
+Back off to unigram
+alpha([]) = 1889
+c(imagine) = 0
+logp(imagine|, to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(that) = 21
+logp(that|to imagine) = -10.1
+Back off to unigram
+alpha([]) = 1759
+c(sandburg) = 0
+logp(sandburg|imagine that) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(uses) = 0
+logp(uses|that sandburg) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(the) = 122
+logp(the|sandburg uses) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(guitar) = 0
+logp(guitar|uses the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(as) = 17
+logp(as|the guitar) = -10.4
+Back off to 2-gram
+alpha(as) = 17
+c(as a) = 2
+logp(a|guitar as) = -5.34
+Back off to unigram
+alpha([]) = 2075
+c(prop) = 0
+logp(prop|as a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|a prop) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|prop .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> ``) = 10
+logp(``|<eos> <eos>) = -3.84
+Back off to unigram
+alpha([]) = 2024
+c(let's) = 0
+logp(let's|<eos> ``) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(talk) = 0
+logp(talk|`` let's) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(about) = 2
+logp(about|let's talk) = -13.5
+Back off to unigram
+alpha([]) = 2015
+c(books) = 0
+logp(books|talk about) = -inf
+Back off to unigram
+alpha([]) = 2137
+c('') = 12
+logp(''|about books) = -11.0
+Back off to 2-gram
+alpha('') = 12
+c('' ,) = 2
+logp(,|books '') = -4.84
+Back off to unigram
+alpha([]) = 1595
+c(moreland) = 0
+logp(moreland|'' ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(said) = 4
+logp(said|, moreland) = -12.5
+Back off to 2-gram
+alpha(said) = 4
+c(said .) = 2
+logp(.|moreland said) = -3.25
+Back off to 3-gram
+alpha(said .) = 2
+c(said . <eos>) = 2
+logp(<eos>|said .) = -0.515
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> well) = 1
+logp(well|<eos> <eos>) = -7.16
+Back off to 3-gram
+alpha(<eos> well) = 1
+c(<eos> well ,) = 1
+logp(,|<eos> well) = -0.515
+Back off to unigram
+alpha([]) = 1595
+c(if) = 9
+logp(if|well ,) = -10.9
+Back off to unigram
+alpha([]) = 1961
+c(you're) = 0
+logp(you're|, if) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(that) = 21
+logp(that|if you're) = -10.1
+Back off to unigram
+alpha([]) = 1759
+c(kind) = 1
+logp(kind|you're that) = -14.3
+Back off to unigram
+alpha([]) = 2096
+c(of) = 71
+logp(of|that kind) = -8.36
+Back off to unigram
+alpha([]) = 1910
+c(sportsman) = 0
+logp(sportsman|kind of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(we're) = 0
+logp(we're|of sportsman) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(here) = 0
+logp(here|sportsman we're) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|we're here) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(help) = 0
+logp(help|here to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(you) = 9
+logp(you|to help) = -11.4
+Back off to unigram
+alpha([]) = 1955
+c(.) = 83
+logp(.|help you) = -8.03
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|you .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> the) = 8
+logp(the|<eos> <eos>) = -4.16
+Back off to unigram
+alpha([]) = 1987
+c(lower) = 0
+logp(lower|<eos> the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(portion) = 0
+logp(portion|the lower) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(provides) = 0
+logp(provides|lower portion) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(a) = 47
+logp(a|portion provides) = -8.98
+Back off to unigram
+alpha([]) = 2075
+c(rating) = 0
+logp(rating|provides a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(at) = 5
+logp(at|a rating) = -12.2
+Back off to unigram
+alpha([]) = 2009
+c(any) = 2
+logp(any|rating at) = -13.4
+Back off to unigram
+alpha([]) = 2125
+c(stage) = 2
+logp(stage|at any) = -13.5
+Back off to unigram
+alpha([]) = 2026
+c(between) = 3
+logp(between|any stage) = -12.9
+Back off to unigram
+alpha([]) = 2015
+c(infancy) = 0
+logp(infancy|stage between) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|between infancy) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(adulthood) = 0
+logp(adulthood|infancy and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|and adulthood) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|adulthood .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> he) = 4
+logp(he|<eos> <eos>) = -5.16
+Back off to unigram
+alpha([]) = 2080
+c(remembered) = 0
+logp(remembered|<eos> he) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(the) = 122
+logp(the|he remembered) = -7.6
+Back off to 2-gram
+alpha(the) = 122
+c(the first) = 1
+logp(first|remembered the) = -9.18
+Back off to unigram
+alpha([]) = 2134
+c(time) = 2
+logp(time|the first) = -13.5
+Back off to unigram
+alpha([]) = 2031
+c(he) = 23
+logp(he|first time) = -9.94
+Back off to 2-gram
+alpha(he) = 23
+c(he saw) = 1
+logp(saw|time he) = -6.78
+Back off to unigram
+alpha([]) = 2123
+c(her) = 4
+logp(her|he saw) = -12.5
+Back off to unigram
+alpha([]) = 2133
+c(,) = 99
+logp(,|saw her) = -7.9
+Back off to unigram
+alpha([]) = 1595
+c(standing) = 0
+logp(standing|her ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(across) = 1
+logp(across|, standing) = -14.5
+Back off to 2-gram
+alpha(across) = 1
+c(across the) = 1
+logp(the|standing across) = -2.25
+Back off to unigram
+alpha([]) = 1987
+c(room) = 0
+logp(room|across the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(at) = 5
+logp(at|the room) = -12.2
+Back off to unigram
+alpha([]) = 2009
+c(a) = 47
+logp(a|room at) = -8.89
+Back off to unigram
+alpha([]) = 2075
+c(party) = 0
+logp(party|at a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|a party) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|party .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(japanese) = 0
+logp(japanese|<eos> <eos>) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(fishermen) = 0
+logp(fishermen|<eos> japanese) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(have) = 7
+logp(have|japanese fishermen) = -11.7
+Back off to unigram
+alpha([]) = 2007
+c(sometimes) = 0
+logp(sometimes|fishermen have) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(observed) = 0
+logp(observed|have sometimes) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(that) = 21
+logp(that|sometimes observed) = -10.1
+Back off to unigram
+alpha([]) = 1759
+c(sardines) = 0
+logp(sardines|observed that) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(hauled) = 0
+logp(hauled|that sardines) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(up) = 4
+logp(up|sardines hauled) = -12.5
+Back off to unigram
+alpha([]) = 2102
+c(in) = 41
+logp(in|hauled up) = -9.15
+Back off to unigram
+alpha([]) = 1894
+c(their) = 7
+logp(their|up in) = -11.6
+Back off to unigram
+alpha([]) = 2126
+c(nets) = 0
+logp(nets|in their) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(during) = 0
+logp(during|their nets) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(a) = 47
+logp(a|nets during) = -8.98
+Back off to unigram
+alpha([]) = 2075
+c(tsunami) = 0
+logp(tsunami|during a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(have) = 7
+logp(have|a tsunami) = -11.7
+Back off to unigram
+alpha([]) = 2007
+c(enormously) = 0
+logp(enormously|tsunami have) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(swollen) = 0
+logp(swollen|have enormously) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(stomachs) = 0
+logp(stomachs|enormously swollen) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(;) = 8
+logp(;|swollen stomachs) = -11.5
+Back off to 2-gram
+alpha(;) = 8
+c(; ;) = 4
+logp(;|stomachs ;) = -3.25
+Back off to 3-gram
+alpha(; ;) = 4
+c(; ; <eos>) = 4
+logp(<eos>|; ;) = -0.515
+Back off to 3-gram
+alpha(; <eos>) = 4
+c(; <eos> <eos>) = 4
+logp(<eos>|; <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> the) = 8
+logp(the|<eos> <eos>) = -4.16
+Back off to unigram
+alpha([]) = 1987
+c(pattern) = 0
+logp(pattern|<eos> the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|the pattern) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of the) = 18
+logp(the|pattern of) = -4.23
+Back off to unigram
+alpha([]) = 1987
+c(oriental) = 0
+logp(oriental|of the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(rug) = 0
+logp(rug|the oriental) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|oriental rug) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, the) = 9
+logp(the|rug ,) = -5.71
+Back off to unigram
+alpha([]) = 1987
+c(delicate) = 0
+logp(delicate|, the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(cut-glass) = 0
+logp(cut-glass|the delicate) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(chandelier) = 0
+logp(chandelier|delicate cut-glass) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|cut-glass chandelier) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|chandelier .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to unigram
+alpha([]) = 1502
+c(are) = 8
+logp(are|<eos> <eos>) = -11.0
+Back off to unigram
+alpha([]) = 1992
+c(you) = 9
+logp(you|<eos> are) = -11.3
+Back off to unigram
+alpha([]) = 1955
+c(paying) = 0
+logp(paying|are you) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(too) = 1
+logp(too|you paying) = -14.5
+Back off to unigram
+alpha([]) = 2038
+c(much) = 2
+logp(much|paying too) = -13.5
+Back off to unigram
+alpha([]) = 2135
+c(for) = 14
+logp(for|too much) = -10.7
+Back off to unigram
+alpha([]) = 1824
+c(your) = 4
+logp(your|much for) = -12.3
+Back off to unigram
+alpha([]) = 2128
+c(truck) = 0
+logp(truck|for your) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(insurance) = 1
+logp(insurance|your truck) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(?) = 8
+logp(?|truck insurance) = -11.5
+Back off to 2-gram
+alpha(?) = 8
+c(? ?) = 4
+logp(?|insurance ?) = -3.25
+Back off to 3-gram
+alpha(? ?) = 4
+c(? ? <eos>) = 4
+logp(<eos>|? ?) = -0.515
+Back off to 3-gram
+alpha(? <eos>) = 4
+c(? <eos> <eos>) = 4
+logp(<eos>|? <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> the) = 8
+logp(the|<eos> <eos>) = -4.16
+Back off to unigram
+alpha([]) = 1987
+c(very) = 2
+logp(very|<eos> the) = -13.4
+Back off to unigram
+alpha([]) = 2037
+c(firmness) = 0
+logp(firmness|the very) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|very firmness) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of her) = 2
+logp(her|firmness of) = -7.4
+Back off to unigram
+alpha([]) = 2133
+c(convictions) = 0
+logp(convictions|of her) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|her convictions) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(logical) = 0
+logp(logical|convictions and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(clearness) = 0
+logp(clearness|and logical) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|logical clearness) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of her) = 2
+logp(her|clearness of) = -7.4
+Back off to unigram
+alpha([]) = 2133
+c(arguments) = 1
+logp(arguments|of her) = -14.5
+Back off to unigram
+alpha([]) = 2054
+c(captivated) = 0
+logp(captivated|her arguments) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|arguments captivated) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(stimulated) = 0
+logp(stimulated|captivated and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(him) = 4
+logp(him|and stimulated) = -12.5
+Back off to unigram
+alpha([]) = 1952
+c(to) = 37
+logp(to|stimulated him) = -9.2
+Back off to 2-gram
+alpha(to) = 37
+c(to make) = 1
+logp(make|him to) = -7.46
+Back off to unigram
+alpha([]) = 2084
+c(greater) = 0
+logp(greater|to make) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(efforts) = 0
+logp(efforts|make greater) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(;) = 8
+logp(;|greater efforts) = -11.5
+Back off to 2-gram
+alpha(;) = 8
+c(; ;) = 4
+logp(;|efforts ;) = -3.25
+Back off to 3-gram
+alpha(; ;) = 4
+c(; ; <eos>) = 4
+logp(<eos>|; ;) = -0.515
+Back off to 3-gram
+alpha(; <eos>) = 4
+c(; <eos> <eos>) = 4
+logp(<eos>|; <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> this) = 3
+logp(this|<eos> <eos>) = -5.57
+Back off to unigram
+alpha([]) = 2030
+c(is) = 12
+logp(is|<eos> this) = -10.9
+Back off to 2-gram
+alpha(is) = 12
+c(is a) = 2
+logp(a|this is) = -4.84
+Back off to unigram
+alpha([]) = 2075
+c(serious-minded) = 0
+logp(serious-minded|is a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(interpretation) = 2
+logp(interpretation|a serious-minded) = -13.5
+Back off to unigram
+alpha([]) = 2098
+c(,) = 99
+logp(,|serious-minded interpretation) = -7.88
+Back off to 2-gram
+alpha(,) = 99
+c(, but) = 2
+logp(but|interpretation ,) = -7.88
+Back off to unigram
+alpha([]) = 1972
+c(it) = 16
+logp(it|, but) = -10.4
+Back off to 2-gram
+alpha(it) = 16
+c(it is) = 2
+logp(is|but it) = -5.25
+Back off to unigram
+alpha([]) = 1847
+c(never) = 0
+logp(never|it is) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(strait-laced) = 0
+logp(strait-laced|is never) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|never strait-laced) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|strait-laced .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> in) = 4
+logp(in|<eos> <eos>) = -5.16
+Back off to unigram
+alpha([]) = 1894
+c(i) = 3
+logp(i|<eos> in) = -12.8
+Back off to unigram
+alpha([]) = 2123
+c(knew) = 3
+logp(knew|in i) = -12.9
+Back off to unigram
+alpha([]) = 2075
+c(you) = 9
+logp(you|i knew) = -11.3
+Back off to unigram
+alpha([]) = 1955
+c(when) = 5
+logp(when|knew you) = -12.1
+Back off to unigram
+alpha([]) = 1991
+c(you) = 9
+logp(you|you when) = -11.3
+Back off to unigram
+alpha([]) = 1955
+c(were) = 6
+logp(were|when you) = -11.8
+Back off to unigram
+alpha([]) = 2003
+c(a) = 47
+logp(a|you were) = -8.89
+Back off to unigram
+alpha([]) = 2075
+c(child) = 0
+logp(child|were a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|a child) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, and) = 5
+logp(and|child ,) = -6.56
+Back off to unigram
+alpha([]) = 1762
+c(you) = 9
+logp(you|, and) = -11.1
+Back off to unigram
+alpha([]) = 1955
+c(were) = 6
+logp(were|and you) = -11.8
+Back off to unigram
+alpha([]) = 2003
+c(pretty) = 0
+logp(pretty|you were) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(then) = 3
+logp(then|were pretty) = -13.0
+Back off to unigram
+alpha([]) = 2134
+c(dominant) = 0
+logp(dominant|pretty then) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(stress) = 0
+logp(stress|then dominant) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(on) = 11
+logp(on|dominant stress) = -11.1
+Back off to unigram
+alpha([]) = 1951
+c(then) = 3
+logp(then|stress on) = -12.8
+Back off to unigram
+alpha([]) = 2134
+c(implies) = 0
+logp(implies|on then) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(that) = 21
+logp(that|then implies) = -10.1
+Back off to 2-gram
+alpha(that) = 21
+c(that the) = 3
+logp(the|implies that) = -5.06
+Back off to unigram
+alpha([]) = 1987
+c(young) = 0
+logp(young|that the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(woman) = 0
+logp(woman|the young) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(spoken) = 0
+logp(spoken|young woman) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|woman spoken) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(is) = 12
+logp(is|spoken to) = -10.8
+Back off to unigram
+alpha([]) = 1847
+c(still) = 1
+logp(still|to is) = -14.3
+Back off to unigram
+alpha([]) = 2135
+c(pretty) = 0
+logp(pretty|is still) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|still pretty) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|pretty .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> he) = 4
+logp(he|<eos> <eos>) = -5.16
+Back off to unigram
+alpha([]) = 2080
+c(is) = 12
+logp(is|<eos> he) = -10.9
+Back off to unigram
+alpha([]) = 1847
+c(already) = 1
+logp(already|he is) = -14.3
+Back off to unigram
+alpha([]) = 2136
+c(beginning) = 0
+logp(beginning|is already) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(to) = 37
+logp(to|already beginning) = -9.33
+Back off to unigram
+alpha([]) = 1889
+c(box) = 0
+logp(box|beginning to) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(the) = 122
+logp(the|to box) = -7.6
+Back off to unigram
+alpha([]) = 1987
+c(compass) = 0
+logp(compass|box the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|the compass) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(alternative) = 0
+logp(alternative|compass of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(lines) = 1
+logp(lines|of alternative) = -14.5
+Back off to 2-gram
+alpha(lines) = 1
+c(lines of) = 1
+logp(of|alternative lines) = -2.25
+Back off to unigram
+alpha([]) = 1910
+c(action) = 1
+logp(action|lines of) = -14.4
+Back off to unigram
+alpha([]) = 2125
+c(,) = 99
+logp(,|of action) = -7.9
+Back off to 2-gram
+alpha(,) = 99
+c(, including) = 2
+logp(including|action ,) = -7.88
+Back off to unigram
+alpha([]) = 2134
+c(doing) = 0
+logp(doing|, including) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(nothing) = 1
+logp(nothing|including doing) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(.) = 83
+logp(.|doing nothing) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|nothing .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> a) = 1
+logp(a|<eos> <eos>) = -7.16
+Back off to unigram
+alpha([]) = 2075
+c(piece) = 0
+logp(piece|<eos> a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|a piece) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(devotional) = 0
+logp(devotional|piece of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(material) = 1
+logp(material|of devotional) = -14.5
+Back off to unigram
+alpha([]) = 2134
+c(,) = 99
+logp(,|devotional material) = -7.9
+Back off to unigram
+alpha([]) = 1595
+c(such) = 3
+logp(such|material ,) = -12.5
+Back off to 2-gram
+alpha(such) = 3
+c(such as) = 1
+logp(as|, such) = -3.84
+Back off to 2-gram
+alpha(as) = 14
+c(as the) = 1
+logp(the|such as) = -6.06
+Back off to 2-gram
+alpha(the) = 121
+c(the upper) = 1
+logp(upper|as the) = -9.17
+Back off to unigram
+alpha([]) = 2136
+c(room) = 0
+logp(room|the upper) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|upper room) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(may) = 2
+logp(may|room ,) = -13.1
+Back off to 2-gram
+alpha(may) = 2
+c(may be) = 1
+logp(be|, may) = -3.25
+Back off to unigram
+alpha([]) = 2068
+c(left) = 0
+logp(left|may be) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(in) = 41
+logp(in|be left) = -9.18
+Back off to unigram
+alpha([]) = 1894
+c(each) = 3
+logp(each|left in) = -12.8
+Back off to unigram
+alpha([]) = 2133
+c(home) = 0
+logp(home|in each) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|each home) = -8.16
+Back off to 2-gram
+alpha(.) = 82
+c(. <eos>) = 82
+logp(<eos>|home .) = -2.25
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> he) = 4
+logp(he|<eos> <eos>) = -5.16
+Back off to 2-gram
+alpha(he) = 17
+c(he was) = 1
+logp(was|<eos> he) = -6.34
+Back off to 2-gram
+alpha(was) = 11
+c(was a) = 2
+logp(a|he was) = -4.71
+Back off to 2-gram
+alpha(a) = 45
+c(a big) = 1
+logp(big|was a) = -7.74
+Back off to unigram
+alpha([]) = 2136
+c(man) = 1
+logp(man|a big) = -14.5
+Back off to unigram
+alpha([]) = 2130
+c(,) = 99
+logp(,|big man) = -7.9
+Back off to 2-gram
+alpha(,) = 99
+c(, and) = 5
+logp(and|man ,) = -6.56
+Back off to unigram
+alpha([]) = 1762
+c(he) = 23
+logp(he|, and) = -9.73
+Back off to unigram
+alpha([]) = 2080
+c(wanted) = 0
+logp(wanted|and he) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(nothing) = 1
+logp(nothing|he wanted) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(little) = 0
+logp(little|wanted nothing) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|nothing little) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(squeezed) = 0
+logp(squeezed|little ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(;) = 8
+logp(;|, squeezed) = -11.5
+Back off to 2-gram
+alpha(;) = 8
+c(; ;) = 4
+logp(;|squeezed ;) = -3.25
+Back off to 3-gram
+alpha(; ;) = 4
+c(; ; <eos>) = 4
+logp(<eos>|; ;) = -0.515
+Back off to 3-gram
+alpha(; <eos>) = 4
+c(; <eos> <eos>) = 4
+logp(<eos>|; <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> ``) = 10
+logp(``|<eos> <eos>) = -3.84
+Back off to unigram
+alpha([]) = 2024
+c(both) = 0
+logp(both|<eos> ``) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(children) = 1
+logp(children|`` both) = -14.5
+Back off to unigram
+alpha([]) = 2136
+c(are) = 8
+logp(are|both children) = -11.5
+Back off to unigram
+alpha([]) = 1992
+c(musical) = 0
+logp(musical|children are) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|are musical) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(my) = 0
+logp(my|musical and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(wife) = 0
+logp(wife|and my) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(is) = 12
+logp(is|my wife) = -11.0
+Back off to 2-gram
+alpha(is) = 12
+c(is a) = 2
+logp(a|wife is) = -4.84
+Back off to unigram
+alpha([]) = 2075
+c(music) = 0
+logp(music|is a) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(lover) = 0
+logp(lover|a music) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|music lover) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(unfailing) = 0
+logp(unfailing|lover of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(instinct) = 0
+logp(instinct|of unfailing) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(and) = 41
+logp(and|unfailing instinct) = -9.18
+Back off to unigram
+alpha([]) = 1762
+c(judgement) = 0
+logp(judgement|instinct and) = -inf
+Back off to unigram
+alpha([]) = 2137
+c('') = 12
+logp(''|and judgement) = -11.0
+Back off to 2-gram
+alpha('') = 12
+c('' .) = 5
+logp(.|judgement '') = -3.51
+Back off to 3-gram
+alpha('' .) = 5
+c('' . <eos>) = 5
+logp(<eos>|'' .) = -0.515
+Back off to 3-gram
+alpha(. <eos>) = 82
+c(. <eos> <eos>) = 82
+logp(<eos>|. <eos>) = -0.515
+Back off to 3-gram
+alpha(<eos> <eos>) = 100
+c(<eos> <eos> however) = 1
+logp(however|<eos> <eos>) = -7.16
+Back off to 3-gram
+alpha(<eos> however) = 1
+c(<eos> however ,) = 1
+logp(,|<eos> however) = -0.515
+Back off to unigram
+alpha([]) = 1595
+c(my) = 0
+logp(my|however ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(principal) = 0
+logp(principal|, my) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(objection) = 0
+logp(objection|my principal) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(in) = 41
+logp(in|principal objection) = -9.18
+Back off to 2-gram
+alpha(in) = 41
+c(in this) = 1
+logp(this|objection in) = -7.61
+Back off to unigram
+alpha([]) = 2030
+c(sort) = 0
+logp(sort|in this) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|this sort) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(novel) = 0
+logp(novel|sort of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(is) = 12
+logp(is|of novel) = -11.0
+Back off to unigram
+alpha([]) = 1847
+c(to) = 37
+logp(to|novel is) = -9.12
+Back off to 2-gram
+alpha(to) = 37
+c(to the) = 6
+logp(the|is to) = -4.88
+Back off to unigram
+alpha([]) = 1987
+c(hackneyed) = 0
+logp(hackneyed|to the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(treatment) = 0
+logp(treatment|the hackneyed) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|hackneyed treatment) = -8.39
+Back off to unigram
+alpha([]) = 1910
+c(race-drivers) = 0
+logp(race-drivers|treatment of) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|of race-drivers) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(pilots) = 0
+logp(pilots|race-drivers ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|, pilots) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(submariners) = 0
+logp(submariners|pilots ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|, submariners) = -7.91
+Back off to unigram
+alpha([]) = 1595
+c(atomic) = 0
+logp(atomic|submariners ,) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(researchers) = 0
+logp(researchers|, atomic) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(,) = 99
+logp(,|atomic researchers) = -7.91
+Back off to 2-gram
+alpha(,) = 99
+c(, and) = 5
+logp(and|researchers ,) = -6.56
+Back off to unigram
+alpha([]) = 1762
+c(all) = 5
+logp(all|, and) = -11.9
+Back off to unigram
+alpha([]) = 2122
+c(the) = 122
+logp(the|and all) = -7.59
+Back off to unigram
+alpha([]) = 1987
+c(machine-masters) = 0
+logp(machine-masters|all the) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(of) = 71
+logp(of|the machine-masters) = -8.39
+Back off to 2-gram
+alpha(of) = 71
+c(of our) = 1
+logp(our|machine-masters of) = -8.4
+Back off to unigram
+alpha([]) = 2134
+c(age) = 0
+logp(age|of our) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(as) = 17
+logp(as|our age) = -10.4
+Back off to unigram
+alpha([]) = 1789
+c(brooding) = 0
+logp(brooding|age as) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(mystics) = 0
+logp(mystics|as brooding) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(or) = 13
+logp(or|brooding mystics) = -10.8
+Back off to unigram
+alpha([]) = 1932
+c(hysterical) = 0
+logp(hysterical|mystics or) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(fatalists) = 0
+logp(fatalists|or hysterical) = -inf
+Back off to unigram
+alpha([]) = 2137
+c(.) = 83
+logp(.|hysterical fatalists) = -8.16
